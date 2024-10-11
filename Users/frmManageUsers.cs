@@ -82,14 +82,18 @@ namespace DVLD.Users
 
         private void shwoDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataGridViewRow r = dgvListUsers.SelectedRows[0];
-            DataGridViewCell cell = r.Cells["PersonID"];
+            // DataGridViewRow r = dgvListUsers.SelectedRows[0];
+            // DataGridViewCell cell = r.Cells["PersonID"];
 
-            string ID =dgvListUsers.SelectedRows[0].Cells["PersonID"].Value.ToString();
-            MessageBox.Show(ID);
-            int PersonID = int.Parse(ID);
-           frmPersonInfo frm = new  frmPersonInfo(PersonID);
+            // string ID =dgvListUsers.SelectedRows[0].Cells["PersonID"].Value.ToString();
+            // MessageBox.Show(ID);
+            // int PersonID = int.Parse(ID);
+            //frmPersonInfo frm = new  frmPersonInfo(PersonID);
+            // frm.ShowDialog();
+            int UserID = (int)dgvListUsers.SelectedRows[0].Cells["UserID"].Value;
+            frmLoginInfo frm = new frmLoginInfo(UserID);
             frm.ShowDialog();
+            _ReloadDataGirdView();
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
