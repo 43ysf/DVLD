@@ -13,6 +13,7 @@ namespace DVLD.Users
 {
     public partial class frmLoginInfo : Form
     {
+
         public frmLoginInfo(int UserID)
         {
             InitializeComponent();
@@ -20,5 +21,9 @@ namespace DVLD.Users
             ctrlPersonInfo1.FillPersonInfo(user.Person);
             ctrlLoginInformation1.LoadData(user);
         }
+
+
+
+
     }
 }

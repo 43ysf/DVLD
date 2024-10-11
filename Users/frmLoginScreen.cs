@@ -10,7 +10,7 @@ namespace DVLD_Presentation.Users
     public partial class frmLoginScreen : Form
     {
         private string _docPath = "C:\\Users\\Yousif\\source\\repos\\DVLD_Presentation\\RememberMe.text";
-
+        //clsUser User = null;
 
         // Importing necessary functions from user32.dll
         [DllImport("user32.dll")]
@@ -94,7 +94,7 @@ namespace DVLD_Presentation.Users
             {
                 //MessageBox.Show("The name of user is: " + user.Person.FirstName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                frmMain frm = new frmMain();
+                frmMain frm = new frmMain(user);
                 frm.Show();
                 this.Hide();
 

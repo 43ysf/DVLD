@@ -1,5 +1,6 @@
 ﻿using DVLD.People;
 using DVLD.Users;
+using DVLD_Business.Users;
 using DVLD_Presentation.Users;
 using Microsoft.Win32;
 using System;
@@ -16,10 +17,12 @@ namespace DVLD
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        clsUser User = null;
+        public frmMain(clsUser User)
         {
             InitializeComponent();
             //SystemEvents.PowerModeChanged += OnScreenIsOf;
+            this.User = User;
  
         }
 
@@ -54,6 +57,18 @@ namespace DVLD
         {
             this.Visible = false;
             frmLoginScreen frm = new frmLoginScreen();
+            frm.ShowDialog();
+        }
+
+        private void currentUserInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLoginInfo frm = new frmLoginInfo(User.UserID);
+            frm.ShowDialog();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmChangePassword frm = new frmChangePassword(User.UserID);
             frm.ShowDialog();
         }
     }

@@ -215,10 +215,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::DVLD.Properties.Resources.backImage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1007, 633);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Name = "frmLoginScreen";
