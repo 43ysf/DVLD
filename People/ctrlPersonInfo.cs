@@ -20,6 +20,7 @@ namespace DVLD.People
         clsPerson Person = null;
         public  void FillPersonInfo(clsPerson person)
         {
+
             linkLabel1.Visible = true;
             this.Person = person;
             lblPersonID.Text = person.PersonID.ToString();
@@ -40,6 +41,29 @@ namespace DVLD.People
 
         }
 
+        public void FillPersonInfo(int PersonID)
+        {
+            clsPerson person = clsPerson.Find(PersonID);
+            linkLabel1.Visible = true;
+            this.Person = person;
+            lblPersonID.Text = person.PersonID.ToString();
+            lblName.Text = person.FirstName + " " + person.SecondName + " " + person.ThirdName + " " + person.LastName;
+            lblNationalNo.Text = person.NationalNo.ToString();
+            lblGendor.Text = person.Gendor ? "Female" : "Male";
+            lblEmail.Text = person.Email;
+            lblAddress.Text = person.Address;
+            lblDateOfBirth.Text = person.DateOfBirth.ToShortDateString().ToString();
+            lblPhone.Text = person.Phone;
+            lblCountry.Text = clsCountry.GetCountryByID(person.NationalityCountryID);
+            if (Person.ImagePath != null && Person.ImagePath != "")
+            {
+                //MessageBox.Show(Person.ImagePath.ToString());
+
+                pbImage.Image = Image.FromFile(person.ImagePath);
+            }
+
+
+        }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
