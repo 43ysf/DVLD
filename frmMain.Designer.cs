@@ -53,7 +53,7 @@
             this.accountSettingsToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1278, 36);
+            this.menuStrip2.Size = new System.Drawing.Size(808, 36);
             this.menuStrip2.TabIndex = 2;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -126,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1278, 572);
+            this.ClientSize = new System.Drawing.Size(808, 572);
             this.Controls.Add(this.menuStrip2);
             this.Name = "frmMain";
             this.Text = "Form1";
