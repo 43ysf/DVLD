@@ -12,14 +12,16 @@ namespace DVLD.Users
 {
     public partial class frmManageUsers : Form
     {
-        public frmManageUsers()
+        clsUser CurrentUser = null;
+        public frmManageUsers(clsUser CurrentUser)
         {
             InitializeComponent();
             LoadDataToDataGrideView();
             txtFilter.Visible = false;
             cbFilterBy.Text = "None";
+            this.CurrentUser = CurrentUser;
         }
-
+        
         public ComboBox cbIsActive = new ComboBox();
         
         private void lbTitle_Click(object sender, EventArgs e)
@@ -262,6 +264,11 @@ namespace DVLD.Users
         private void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int UserID =(int) dgvListUsers.SelectedRows[0].Cells["UserID"].Value;
+            if(UserID == CurrentUser.UserID)
+            {
+                MessageBox.Show("You can't delete current user", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             if(clsUser.Delete(UserID))
             {
                 MessageBox.Show("User Deleted Successfully");

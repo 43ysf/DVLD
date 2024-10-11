@@ -49,7 +49,7 @@ namespace DVLD
 
         private void usersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmManageUsers frm = new frmManageUsers();
+            frmManageUsers frm = new frmManageUsers(User);
             frm.ShowDialog();
         }
 
