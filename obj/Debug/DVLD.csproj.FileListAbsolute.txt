@@ -28,3 +28,4 @@ C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Users.ctrlAddNewUser.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Users.frmChangePassword.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Users.ctrlLoginInformation.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Users.frmLoginInfo.resources
+C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Manage_Application_Types.frmManageApplicationTypes.resources

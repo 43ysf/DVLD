@@ -1,4 +1,5 @@
-﻿using DVLD.People;
+﻿using DVLD.Manage_Application_Types;
+using DVLD.People;
 using DVLD.Users;
 using DVLD_Business.Users;
 using DVLD_Presentation.Users;
@@ -69,6 +70,27 @@ namespace DVLD
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmChangePassword frm = new frmChangePassword(User.UserID);
+            frm.ShowDialog();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void drivingLicenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           frmManageApplicationTypes frm = new frmManageApplicationTypes();
             frm.ShowDialog();
         }
     }
