@@ -62,20 +62,11 @@
     <Compile Include="btnExit.Designer.cs">
       <DependentUpon>btnExit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTest.Designer.cs">
-      <DependentUpon>frmTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Manage Application Types\frmEditApplicationType.cs">
       <SubType>Form</SubType>
@@ -88,6 +79,12 @@
     </Compile>
     <Compile Include="Manage Application Types\frmManageApplicationTypes.Designer.cs">
       <DependentUpon>frmManageApplicationTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Test type\frmManageTestTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Test type\frmManageTestTypes.Designer.cs">
+      <DependentUpon>frmManageTestTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="MyCustomControls\MyBtn.cs">
       <SubType>Component</SubType>
@@ -181,14 +178,14 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTest.resx">
-      <DependentUpon>frmTest.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Manage Application Types\frmEditApplicationType.resx">
       <DependentUpon>frmEditApplicationType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage Application Types\frmManageApplicationTypes.resx">
       <DependentUpon>frmManageApplicationTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Test type\frmManageTestTypes.resx">
+      <DependentUpon>frmManageTestTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\ctrlAddNewPerson.resx">
       <DependentUpon>ctrlAddNewPerson.cs</DependentUpon>

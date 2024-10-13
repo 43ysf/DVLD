@@ -18,7 +18,6 @@ C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.People.frmAddOrUpdate.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD_Presentation.People.ctrlAddNewPerson.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.People.ctrlPersonInfo.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.People.frmPersonInfo.resources
-C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.frmTest.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.People.ctrlFindOrAddUser.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD_Presentation.Users.frmLoginScreen.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Users.frmManageUsers.resources
@@ -30,3 +29,4 @@ C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Users.ctrlLoginInformation.reso
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Users.frmLoginInfo.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Manage_Application_Types.frmManageApplicationTypes.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Manage_Application_Types.frmEditApplicationType.resources
+C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Manage_Test_type.frmManageTestTypes.resources

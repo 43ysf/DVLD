@@ -30,6 +30,11 @@
         {
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.msApplicatinos = new System.Windows.Forms.ToolStripMenuItem();
+            this.drivingLicenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageApplicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.detainLicensesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageApplicationTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageTestTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPeople = new System.Windows.Forms.ToolStripMenuItem();
             this.driversToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,11 +42,6 @@
             this.currentUserInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePassworedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.drivingLicenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageApplicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.detainLicensesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageApplicationTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageTestTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,6 +77,39 @@
             this.msApplicatinos.Name = "msApplicatinos";
             this.msApplicatinos.Size = new System.Drawing.Size(126, 24);
             this.msApplicatinos.Text = "Applications";
+            // 
+            // drivingLicenToolStripMenuItem
+            // 
+            this.drivingLicenToolStripMenuItem.Name = "drivingLicenToolStripMenuItem";
+            this.drivingLicenToolStripMenuItem.Size = new System.Drawing.Size(313, 26);
+            this.drivingLicenToolStripMenuItem.Text = "Driving Licenses Services";
+            this.drivingLicenToolStripMenuItem.Click += new System.EventHandler(this.drivingLicenToolStripMenuItem_Click);
+            // 
+            // manageApplicationsToolStripMenuItem
+            // 
+            this.manageApplicationsToolStripMenuItem.Name = "manageApplicationsToolStripMenuItem";
+            this.manageApplicationsToolStripMenuItem.Size = new System.Drawing.Size(313, 26);
+            this.manageApplicationsToolStripMenuItem.Text = "Manage Applications";
+            // 
+            // detainLicensesToolStripMenuItem
+            // 
+            this.detainLicensesToolStripMenuItem.Name = "detainLicensesToolStripMenuItem";
+            this.detainLicensesToolStripMenuItem.Size = new System.Drawing.Size(313, 26);
+            this.detainLicensesToolStripMenuItem.Text = "Detain Licenses";
+            // 
+            // manageApplicationTypesToolStripMenuItem
+            // 
+            this.manageApplicationTypesToolStripMenuItem.Name = "manageApplicationTypesToolStripMenuItem";
+            this.manageApplicationTypesToolStripMenuItem.Size = new System.Drawing.Size(313, 26);
+            this.manageApplicationTypesToolStripMenuItem.Text = "Manage Application Types";
+            this.manageApplicationTypesToolStripMenuItem.Click += new System.EventHandler(this.manageApplicationTypesToolStripMenuItem_Click);
+            // 
+            // manageTestTypesToolStripMenuItem
+            // 
+            this.manageTestTypesToolStripMenuItem.Name = "manageTestTypesToolStripMenuItem";
+            this.manageTestTypesToolStripMenuItem.Size = new System.Drawing.Size(313, 26);
+            this.manageTestTypesToolStripMenuItem.Text = "Manage Test Types";
+            this.manageTestTypesToolStripMenuItem.Click += new System.EventHandler(this.manageTestTypesToolStripMenuItem_Click);
             // 
             // msPeople
             // 
@@ -134,38 +167,6 @@
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
-            // 
-            // drivingLicenToolStripMenuItem
-            // 
-            this.drivingLicenToolStripMenuItem.Name = "drivingLicenToolStripMenuItem";
-            this.drivingLicenToolStripMenuItem.Size = new System.Drawing.Size(313, 26);
-            this.drivingLicenToolStripMenuItem.Text = "Driving Licenses Services";
-            this.drivingLicenToolStripMenuItem.Click += new System.EventHandler(this.drivingLicenToolStripMenuItem_Click);
-            // 
-            // manageApplicationsToolStripMenuItem
-            // 
-            this.manageApplicationsToolStripMenuItem.Name = "manageApplicationsToolStripMenuItem";
-            this.manageApplicationsToolStripMenuItem.Size = new System.Drawing.Size(313, 26);
-            this.manageApplicationsToolStripMenuItem.Text = "Manage Applications";
-            // 
-            // detainLicensesToolStripMenuItem
-            // 
-            this.detainLicensesToolStripMenuItem.Name = "detainLicensesToolStripMenuItem";
-            this.detainLicensesToolStripMenuItem.Size = new System.Drawing.Size(313, 26);
-            this.detainLicensesToolStripMenuItem.Text = "Detain Licenses";
-            // 
-            // manageApplicationTypesToolStripMenuItem
-            // 
-            this.manageApplicationTypesToolStripMenuItem.Name = "manageApplicationTypesToolStripMenuItem";
-            this.manageApplicationTypesToolStripMenuItem.Size = new System.Drawing.Size(313, 26);
-            this.manageApplicationTypesToolStripMenuItem.Text = "Manage Application Types";
-            this.manageApplicationTypesToolStripMenuItem.Click += new System.EventHandler(this.manageApplicationTypesToolStripMenuItem_Click);
-            // 
-            // manageTestTypesToolStripMenuItem
-            // 
-            this.manageTestTypesToolStripMenuItem.Name = "manageTestTypesToolStripMenuItem";
-            this.manageTestTypesToolStripMenuItem.Size = new System.Drawing.Size(313, 26);
-            this.manageTestTypesToolStripMenuItem.Text = "Manage Test Types";
             // 
             // pictureBox1
             // 

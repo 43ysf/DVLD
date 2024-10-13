@@ -1,4 +1,5 @@
 ﻿using DVLD.Manage_Application_Types;
+using DVLD.Manage_Test_type;
 using DVLD.People;
 using DVLD.Users;
 using DVLD_Business.Users;
@@ -21,6 +22,7 @@ namespace DVLD
         clsUser User = null;
         public frmMain(clsUser User)
         {
+            
             InitializeComponent();
             //SystemEvents.PowerModeChanged += OnScreenIsOf;
             this.User = User;
@@ -91,6 +93,12 @@ namespace DVLD
         private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
         {
            frmManageApplicationTypes frm = new frmManageApplicationTypes();
+            frm.ShowDialog();
+        }
+
+        private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageTestTypes frm = new frmManageTestTypes();
             frm.ShowDialog();
         }
     }

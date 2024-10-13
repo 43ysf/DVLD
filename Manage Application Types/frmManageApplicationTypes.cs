@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD.Properties;
 using DVLD_Business;
 using DVLD_Business.ApplicationTypes;
 
@@ -14,6 +15,7 @@ namespace DVLD.Manage_Application_Types
 {
     public partial class frmManageApplicationTypes : Form
     {
+
         public frmManageApplicationTypes()
         {
             InitializeComponent();
@@ -72,6 +74,11 @@ namespace DVLD.Manage_Application_Types
             frmEditApplicationType frm = new frmEditApplicationType( ApplicationID);
             frm.ShowDialog();
             _FillDataGridVeiwData();
+        }
+
+        public void Edit(string Title)
+        {
+            this.lbTitle.Text = Title;
         }
     }
 }
