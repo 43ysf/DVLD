@@ -165,14 +165,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbTitle;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtTitle;
-        private System.Windows.Forms.TextBox txtFees;
-        private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnClose;
+        protected System.Windows.Forms.Label lbTitle;
+        protected System.Windows.Forms.Label label3;
+        protected System.Windows.Forms.Label label1;
+        protected System.Windows.Forms.Label label2;
+        protected System.Windows.Forms.TextBox txtTitle;
+        protected System.Windows.Forms.TextBox txtFees;
+        protected System.Windows.Forms.Label lblID;
+        protected System.Windows.Forms.Button btnSave;
+        protected System.Windows.Forms.Button btnClose;
     }
 }

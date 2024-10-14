@@ -80,6 +80,9 @@
     <Compile Include="Manage Application Types\frmManageApplicationTypes.Designer.cs">
       <DependentUpon>frmManageApplicationTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage Test type\frmEditTestType.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Manage Test type\frmManageTestTypes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manage Application Types\frmManageApplicationTypes.resx">
       <DependentUpon>frmManageApplicationTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Test type\frmEditTestType.resx">
+      <DependentUpon>frmEditTestType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage Test type\frmManageTestTypes.resx">
       <DependentUpon>frmManageTestTypes.cs</DependentUpon>

@@ -21,6 +21,12 @@ namespace DVLD.Manage_Application_Types
             _FillData(Application);
         }
 
+        public frmEditApplicationType()
+        {
+            InitializeComponent();
+
+        }
+
         private void _FillData(clsApplicationType Application)
         {
             if (Application != null)
@@ -40,7 +46,7 @@ namespace DVLD.Manage_Application_Types
 
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        virtual protected  void btnSave_Click(object sender, EventArgs e)
         {
             Application.ApplicationTypeTitle = txtTitle.Text;
             Application.ApplicationFees = Convert.ToDouble(txtFees.Text);

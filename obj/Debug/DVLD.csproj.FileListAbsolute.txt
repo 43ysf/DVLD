@@ -30,3 +30,4 @@ C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Users.frmLoginInfo.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Manage_Application_Types.frmManageApplicationTypes.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Manage_Application_Types.frmEditApplicationType.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Manage_Test_type.frmManageTestTypes.resources
+C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Manage_Test_type.frmEditTestType.resources
