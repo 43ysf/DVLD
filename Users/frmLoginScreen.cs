@@ -93,8 +93,8 @@ namespace DVLD_Presentation.Users
             else
             {
                 //MessageBox.Show("The name of user is: " + user.Person.FirstName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                frmMain frm = new frmMain(user);
+                clsCurrentUserInfo.CurrentUserID = user.UserID;
+                frmMain frm = new frmMain();
                 frm.Show();
                 this.Hide();
 

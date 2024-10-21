@@ -1,4 +1,5 @@
-﻿using DVLD.Manage_Application_Types;
+﻿using DVLD.DriverLicenseApplications;
+using DVLD.Manage_Application_Types;
 using DVLD.Manage_Test_type;
 using DVLD.People;
 using DVLD.Users;
@@ -20,12 +21,11 @@ namespace DVLD
     public partial class frmMain : Form
     {
         clsUser User = null;
-        public frmMain(clsUser User)
+        public frmMain()
         {
             
             InitializeComponent();
             //SystemEvents.PowerModeChanged += OnScreenIsOf;
-            this.User = User;
  
         }
 
@@ -65,13 +65,13 @@ namespace DVLD
 
         private void currentUserInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmLoginInfo frm = new frmLoginInfo(User.UserID);
+            frmLoginInfo frm = new frmLoginInfo(clsCurrentUserInfo.CurrentUserID);
             frm.ShowDialog();
         }
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmChangePassword frm = new frmChangePassword(User.UserID);
+            frmChangePassword frm = new frmChangePassword(clsCurrentUserInfo.CurrentUserID);
             frm.ShowDialog();
         }
 
@@ -99,6 +99,12 @@ namespace DVLD
         private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmManageTestTypes frm = new frmManageTestTypes();
+            frm.ShowDialog();
+        }
+
+        private void loacalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListLocalDrivingLicenseApplications frm = new frmListLocalDrivingLicenseApplications();
             frm.ShowDialog();
         }
     }

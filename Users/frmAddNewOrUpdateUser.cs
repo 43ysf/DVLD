@@ -19,17 +19,17 @@ namespace DVLD.Users
         public frmAddNewOrUpdateUser()
         {
             InitializeComponent();
-            ctrlFindPerson.DataBack += GetPersonID;
+            UcFindOrAddPerson.DataBack += GetPersonID;
             _UserFromFind = true;
         }
         public frmAddNewOrUpdateUser(int UserID)
         {
             InitializeComponent();
             lbTitle.Text = "Update User";
-            ctrlFindPerson.DataBack += GetPersonID;
+            //ctrlFindPerson.DataBack += GetPersonID;
             this.User = clsUser.Find(UserID);
             _PersonID = UserID;
-            this.ctrlFindPerson.UpdateMode(User);
+            this.UcFindOrAddPerson.UpdateMode(User);
         }
 
         clsUser User = new clsUser(); 

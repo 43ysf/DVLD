@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpPersonInfo = new System.Windows.Forms.TabPage();
-            this.ctrlFindPerson = new DVLD.People.ctrlFindOrAddUser();
+            this.UcFindOrAddPerson = new DVLD.People.ctrlFindOrAddUser();
             this.tbLoginInfo = new System.Windows.Forms.TabPage();
             this.cbIsActive = new System.Windows.Forms.CheckBox();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
@@ -51,16 +51,16 @@
             this.tbLoginInfo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnNext
             // 
-            this.button1.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(862, 552);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 50);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Next";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnNext.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Location = new System.Drawing.Point(862, 552);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(128, 50);
+            this.btnNext.TabIndex = 1;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabControl1
             // 
@@ -75,8 +75,8 @@
             // 
             // tpPersonInfo
             // 
-            this.tpPersonInfo.Controls.Add(this.ctrlFindPerson);
-            this.tpPersonInfo.Controls.Add(this.button1);
+            this.tpPersonInfo.Controls.Add(this.UcFindOrAddPerson);
+            this.tpPersonInfo.Controls.Add(this.btnNext);
             this.tpPersonInfo.Location = new System.Drawing.Point(4, 25);
             this.tpPersonInfo.Name = "tpPersonInfo";
             this.tpPersonInfo.Padding = new System.Windows.Forms.Padding(3);
@@ -85,14 +85,14 @@
             this.tpPersonInfo.Text = "Person Info";
             this.tpPersonInfo.UseVisualStyleBackColor = true;
             // 
-            // ctrlFindPerson
+            // UcFindOrAddPerson
             // 
-            this.ctrlFindPerson.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ctrlFindPerson.Location = new System.Drawing.Point(3, 3);
-            this.ctrlFindPerson.Name = "ctrlFindPerson";
-            this.ctrlFindPerson.Size = new System.Drawing.Size(1012, 543);
-            this.ctrlFindPerson.TabIndex = 0;
-            this.ctrlFindPerson.Load += new System.EventHandler(this.ctrlFindPerson_Load);
+            this.UcFindOrAddPerson.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UcFindOrAddPerson.Location = new System.Drawing.Point(3, 3);
+            this.UcFindOrAddPerson.Name = "UcFindOrAddPerson";
+            this.UcFindOrAddPerson.Size = new System.Drawing.Size(1012, 543);
+            this.UcFindOrAddPerson.TabIndex = 0;
+            this.UcFindOrAddPerson.Load += new System.EventHandler(this.ctrlFindPerson_Load);
             // 
             // tbLoginInfo
             // 
@@ -260,11 +260,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNext;
         private People.ctrlFindOrAddUser ctrlFindOrAddUser1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tpPersonInfo;
-        private People.ctrlFindOrAddUser ctrlFindPerson;
+        private People.ctrlFindOrAddUser UcFindOrAddPerson;
         private System.Windows.Forms.TabPage tbLoginInfo;
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Button btnSave;

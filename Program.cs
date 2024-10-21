@@ -1,4 +1,5 @@
 ﻿using DVLD.DriverLicenseApplications;
+using DVLD.LocalDriverLicenseApplications;
 using DVLD.Manage_Test_type;
 using DVLD.People;
 using DVLD.Users;
@@ -21,8 +22,8 @@ namespace DVLD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmMain());
-            Application.Run(new frmMyFrm()) ;
+            Application.Run(new frmAddNewLocalDrivingApplication());
+          //  Application.Run(new frmMain()) ;
         }
     }
 }

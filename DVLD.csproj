@@ -62,11 +62,18 @@
     <Compile Include="btnExit.Designer.cs">
       <DependentUpon>btnExit.cs</DependentUpon>
     </Compile>
-    <Compile Include="DriverLicenseApplications\frmListDrivingLicenseApplications.cs">
+    <Compile Include="clsCurrentUserInfo.cs" />
+    <Compile Include="LocalDriverLicenseApplications\frmAddNewLocalDrivingApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DriverLicenseApplications\frmListDrivingLicenseApplications.Designer.cs">
-      <DependentUpon>frmListDrivingLicenseApplications.cs</DependentUpon>
+    <Compile Include="LocalDriverLicenseApplications\frmAddNewLocalDrivingApplication.Designer.cs">
+      <DependentUpon>frmAddNewLocalDrivingApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalDriverLicenseApplications\frmListLocalDrivingLicenseApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalDriverLicenseApplications\frmListLocalDrivingLicenseApplications.Designer.cs">
+      <DependentUpon>frmListLocalDrivingLicenseApplications.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -184,8 +191,11 @@
     <Compile Include="Users\frmManageUsers.Designer.cs">
       <DependentUpon>frmManageUsers.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DriverLicenseApplications\frmListDrivingLicenseApplications.resx">
-      <DependentUpon>frmListDrivingLicenseApplications.cs</DependentUpon>
+    <EmbeddedResource Include="LocalDriverLicenseApplications\frmAddNewLocalDrivingApplication.resx">
+      <DependentUpon>frmAddNewLocalDrivingApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalDriverLicenseApplications\frmListLocalDrivingLicenseApplications.resx">
+      <DependentUpon>frmListLocalDrivingLicenseApplications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
