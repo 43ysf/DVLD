@@ -1,4 +1,5 @@
-﻿using DVLD_Business.LocalDrivingLicenseApplications;
+﻿using DVLD.LocalDriverLicenseApplications;
+using DVLD_Business.LocalDrivingLicenseApplications;
 using DVLD_Business.Manage_Test_Types;
 using System;
 using System.Collections.Generic;
@@ -54,6 +55,13 @@ namespace DVLD.DriverLicenseApplications
         private void schdualTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddNewLicenseApplication_Click(object sender, EventArgs e)
+        {
+            frmAddNewLocalDrivingApplication frm  = new frmAddNewLocalDrivingApplication();
+            frm.ShowDialog();
+            _FillDataGirdView();
         }
     }
 }

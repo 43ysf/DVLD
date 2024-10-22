@@ -1,4 +1,5 @@
 ﻿using DVLD.DriverLicenseApplications;
+using DVLD.LocalDriverLicenseApplications;
 using DVLD.Manage_Application_Types;
 using DVLD.Manage_Test_type;
 using DVLD.People;
@@ -105,6 +106,12 @@ namespace DVLD
         private void loacalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListLocalDrivingLicenseApplications frm = new frmListLocalDrivingLicenseApplications();
+            frm.ShowDialog();
+        }
+
+        private void lockalLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddNewLocalDrivingApplication frm = new frmAddNewLocalDrivingApplication();
             frm.ShowDialog();
         }
     }

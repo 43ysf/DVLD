@@ -182,6 +182,7 @@
             this.btnAddNewLicenseApplication.Size = new System.Drawing.Size(148, 64);
             this.btnAddNewLicenseApplication.TabIndex = 13;
             this.btnAddNewLicenseApplication.UseVisualStyleBackColor = false;
+            this.btnAddNewLicenseApplication.Click += new System.EventHandler(this.btnAddNewLicenseApplication_Click);
             // 
             // button1
             // 
@@ -211,7 +212,7 @@
             this.cancelApplicationToolStripMenuItem,
             this.schdualTestToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(246, 152);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(246, 124);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // showApplicationDetailsToolStripMenuItem
@@ -245,7 +246,7 @@
             this.schdualTestToolStripMenuItem.Text = "Sechduale Test";
             this.schdualTestToolStripMenuItem.Click += new System.EventHandler(this.schdualTestToolStripMenuItem_Click);
             // 
-            // frmListDrivingLicenseApplications
+            // frmListLocalDrivingLicenseApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -262,7 +263,7 @@
             this.Controls.Add(this.lblNumberOfRecords);
             this.Controls.Add(this.dgvListLicenseApplications);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmListDrivingLicenseApplications";
+            this.Name = "frmListLocalDrivingLicenseApplications";
             this.Text = "frmListDrivingLicenseApplications";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListLicenseApplications)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

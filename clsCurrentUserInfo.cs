@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD_Business.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace DVLD
 {
     public static  class clsCurrentUserInfo
     {
-        public static int CurrentUserID = -1;
+        public static clsUser User { get; set; }
+        public static int CurrentUserID { set; get; }
     }
 }

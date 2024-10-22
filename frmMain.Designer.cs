@@ -63,7 +63,7 @@
             this.accountSettingsToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1312, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(1312, 30);
             this.menuStrip2.TabIndex = 2;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -101,8 +101,9 @@
             // lockalLicenseToolStripMenuItem
             // 
             this.lockalLicenseToolStripMenuItem.Name = "lockalLicenseToolStripMenuItem";
-            this.lockalLicenseToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this.lockalLicenseToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.lockalLicenseToolStripMenuItem.Text = "Local License";
+            this.lockalLicenseToolStripMenuItem.Click += new System.EventHandler(this.lockalLicenseToolStripMenuItem_Click);
             // 
             // manageApplicationsToolStripMenuItem
             // 
@@ -200,9 +201,9 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::DVLD.Properties.Resources.Logo_Final;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 30);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1312, 645);
+            this.pictureBox1.Size = new System.Drawing.Size(1312, 643);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
