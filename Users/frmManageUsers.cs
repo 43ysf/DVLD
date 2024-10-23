@@ -120,7 +120,7 @@ namespace DVLD.Users
         {
             _ReloadDataGirdView();
 
-            string SelectedItem = cbFilterBy.SelectedItem.ToString();
+            string SelectedItem = cbFilterBy.Text;
             if (SelectedItem == "UserID" || SelectedItem == "PersonID")
             {
                 txtFilter.Clear();

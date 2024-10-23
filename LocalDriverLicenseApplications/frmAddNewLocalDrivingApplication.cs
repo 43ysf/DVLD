@@ -2,6 +2,7 @@
 using DVLD_Business.ApplicationTypes;
 using DVLD_Business.LicenseClasses;
 using DVLD_Business.LocalDrivingLicenseApplications;
+using DVLD_Business.People;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace DVLD.LocalDriverLicenseApplications
     public partial class frmAddNewLocalDrivingApplication : Form
     {
         private int _PersonID = -1;
-
+        private clsPerson _Person = null;
         private clsApplication app = new clsApplication(); 
         private clsLocalDrivingLicenseApplication dla = new clsLocalDrivingLicenseApplication();
         public frmAddNewLocalDrivingApplication()
@@ -76,6 +77,8 @@ namespace DVLD.LocalDriverLicenseApplications
             }
             _CanSwitchTap = true;
             tabControl1.SelectedIndex = 1;
+            _Person = clsPerson.Find(_PersonID);
+            
             
 
         }
@@ -84,9 +87,6 @@ namespace DVLD.LocalDriverLicenseApplications
         {
 
         }
-
-
-
 
         private void _LoadComboBoxData()
         {
@@ -99,28 +99,35 @@ namespace DVLD.LocalDriverLicenseApplications
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            app.CreatedBy = clsCurrentUserInfo.CurrentUserID;
-            app.ApplicationStatus = 1;
-            app.ApplicationDate = Convert.ToDateTime(lblApplicationDate.Text);
-            app.PaidFees = Convert.ToDouble(lblFees.Text);
-            app.ApplicationPersonID = _PersonID;
-            app.LastStatusDate = app.ApplicationDate;
-            app.ApplicationType = clsApplicationType.Find(1).ApplictionTypeID;
-            if (app.AddNew())
+            if (!clsLocalDrivingLicenseApplication.IsPersonHasTheSamAppOrder(_Person.NationalNo, cbLicenseClasses.Text))
             {
-                dla.ApplicationID = app.ApplicationID;
-                dla.LicenseClassID = (int)cbLicenseClasses.SelectedValue;
-                if (dla._AddNew())
+                MessageBox.Show(cbLicenseClasses.Text);
+
+                app.CreatedBy = clsCurrentUserInfo.CurrentUserID;
+                app.ApplicationStatus = 1;
+                app.ApplicationDate = Convert.ToDateTime(lblApplicationDate.Text);
+                app.PaidFees = Convert.ToDouble(lblFees.Text);
+                app.ApplicationPersonID = _PersonID;
+                app.LastStatusDate = app.ApplicationDate;
+                app.ApplicationType = clsApplicationType.Find(1).ApplictionTypeID;
+                if (app.AddNew())
                 {
-                    MessageBox.Show("dla add successfuly");
-                    lblApplicationID.Text = dla.LocalDrivingLicenseApplicationID.ToString();
+                    dla.ApplicationID = app.ApplicationID;
+                    dla.LicenseClassID = (int)cbLicenseClasses.SelectedValue;
+                    if (dla._AddNew())
+                    {
+                        MessageBox.Show("dla add successfuly");
+                        lblApplicationID.Text = dla.LocalDrivingLicenseApplicationID.ToString();
+                    }
+                    else
+                        MessageBox.Show(" dal not add");
+
                 }
                 else
-                    MessageBox.Show(" dal not add");
-
+                    MessageBox.Show("app not add");
             }
             else
-                MessageBox.Show("app not add");
+                MessageBox.Show("The application is already Exist pleae enter another application or Done your application or cancel it!!!");
         }
     }
 }

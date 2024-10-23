@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.cbActive = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
@@ -50,23 +49,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cbActive
-            // 
-            this.cbActive.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbActive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbActive.FormattingEnabled = true;
-            this.cbActive.Items.AddRange(new object[] {
-            "All",
-            "No",
-            "Yes"});
-            this.cbActive.Location = new System.Drawing.Point(350, 349);
-            this.cbActive.Name = "cbActive";
-            this.cbActive.Size = new System.Drawing.Size(226, 28);
-            this.cbActive.Sorted = true;
-            this.cbActive.TabIndex = 19;
-            this.cbActive.Visible = false;
             // 
             // label2
             // 
@@ -89,6 +71,8 @@
             this.txtFilter.Size = new System.Drawing.Size(342, 27);
             this.txtFilter.TabIndex = 16;
             this.txtFilter.Visible = false;
+            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
+            this.txtFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilter_KeyPress);
             // 
             // cbFilterBy
             // 
@@ -97,16 +81,17 @@
             this.cbFilterBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFilterBy.FormattingEnabled = true;
             this.cbFilterBy.Items.AddRange(new object[] {
-            "Active",
+            "FullName",
+            "L.D.LAppID",
+            "NationalNo",
             "None",
-            "PersonID",
-            "UserID",
-            "Username"});
+            "Status"});
             this.cbFilterBy.Location = new System.Drawing.Point(118, 349);
             this.cbFilterBy.Name = "cbFilterBy";
             this.cbFilterBy.Size = new System.Drawing.Size(226, 28);
             this.cbFilterBy.Sorted = true;
             this.cbFilterBy.TabIndex = 15;
+            this.cbFilterBy.SelectedIndexChanged += new System.EventHandler(this.cbFilterBy_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -132,6 +117,7 @@
             // 
             // lbTitle
             // 
+            this.lbTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.ForeColor = System.Drawing.Color.Red;
@@ -156,6 +142,7 @@
             this.dgvListLicenseApplications.RowTemplate.Height = 24;
             this.dgvListLicenseApplications.Size = new System.Drawing.Size(1160, 392);
             this.dgvListLicenseApplications.TabIndex = 12;
+            this.dgvListLicenseApplications.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvListLicenseApplications_MouseDown);
             // 
             // pictureBox1
             // 
@@ -213,7 +200,6 @@
             this.schdualTestToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(246, 124);
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // showApplicationDetailsToolStripMenuItem
             // 
@@ -238,6 +224,7 @@
             this.cancelApplicationToolStripMenuItem.Name = "cancelApplicationToolStripMenuItem";
             this.cancelApplicationToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
             this.cancelApplicationToolStripMenuItem.Text = "Cancel Application";
+            this.cancelApplicationToolStripMenuItem.Click += new System.EventHandler(this.cancelApplicationToolStripMenuItem_Click);
             // 
             // schdualTestToolStripMenuItem
             // 
@@ -253,7 +240,6 @@
             this.ClientSize = new System.Drawing.Size(1194, 851);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbTitle);
-            this.Controls.Add(this.cbActive);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtFilter);
@@ -274,8 +260,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cbActive;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtFilter;
         private System.Windows.Forms.ComboBox cbFilterBy;
