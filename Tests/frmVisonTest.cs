@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD.Appointments;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,12 @@ namespace DVLD.Tests
         private void lbTitle_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddAppointments_Click(object sender, EventArgs e)
+        {
+            frmAddAppointment frm = new frmAddAppointment();
+            frm.ShowDialog();
         }
     }
 }

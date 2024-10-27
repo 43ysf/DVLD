@@ -119,13 +119,14 @@
             this.btnAddAppointments.Size = new System.Drawing.Size(61, 39);
             this.btnAddAppointments.TabIndex = 20;
             this.btnAddAppointments.UseVisualStyleBackColor = true;
+            this.btnAddAppointments.Click += new System.EventHandler(this.btnAddAppointments_Click);
             // 
             // ctrlLocalDrivingLicenseAppInfo1
             // 
             this.ctrlLocalDrivingLicenseAppInfo1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ctrlLocalDrivingLicenseAppInfo1.Location = new System.Drawing.Point(16, 138);
             this.ctrlLocalDrivingLicenseAppInfo1.Name = "ctrlLocalDrivingLicenseAppInfo1";
-            this.ctrlLocalDrivingLicenseAppInfo1.Size = new System.Drawing.Size(887, 432);
+            this.ctrlLocalDrivingLicenseAppInfo1.Size = new System.Drawing.Size(887, 426);
             this.ctrlLocalDrivingLicenseAppInfo1.TabIndex = 0;
             // 
             // frmVisonTest

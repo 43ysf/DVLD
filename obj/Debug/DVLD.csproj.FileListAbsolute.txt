@@ -38,3 +38,4 @@ C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Applications.ctrlApplicationBas
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.LocalDriverLicenseApplications.ctrlLocalDrivingLicenseAppInfo.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Tests.frmVisonTest.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.frmTest.resources
+C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Appointments.frmAddAppointment.resources
