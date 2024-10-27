@@ -22,9 +22,9 @@ namespace DVLD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           // Application.Run(new frmAddNewLocalDrivingApplication());
-          //  Application.Run(new frmMain()) ;
-          Application.Run(new frmLoginScreen());
+            // Application.Run(new frmAddNewLocalDrivingApplication());
+            Application.Run(new frmMain());
+            //Application.Run(new frmTest());
         }
     }
 }

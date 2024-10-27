@@ -1,4 +1,5 @@
 ﻿using DVLD.LocalDriverLicenseApplications;
+using DVLD.Tests;
 using DVLD_Business.Applications;
 using DVLD_Business.LocalDrivingLicenseApplications;
 using DVLD_Business.Manage_Test_Types;
@@ -129,6 +130,14 @@ namespace DVLD.DriverLicenseApplications
 
                 }
             }
+        }
+
+        private void schdualAVisionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseApplicationID = (int)dgvListLicenseApplications.SelectedRows[0].Cells["L.D.LAppID"].Value;
+
+            frmVisonTest frm = new frmVisonTest(LocalDrivingLicenseApplicationID);
+            frm.ShowDialog();
         }
     }
 }

@@ -33,3 +33,8 @@ C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Manage_Test_type.frmManageTestT
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Manage_Test_type.frmEditTestType.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.DriverLicenseApplications.frmListLocalDrivingLicenseApplications.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.LocalDriverLicenseApplications.frmAddNewLocalDrivingApplication.resources
+C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.LocalDriverLicenseApplications.ctrlDrivinLicenseApplicationInfo.resources
+C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Applications.ctrlApplicationBasicInfo.resources
+C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.LocalDriverLicenseApplications.ctrlLocalDrivingLicenseAppInfo.resources
+C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Tests.frmVisonTest.resources
+C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.frmTest.resources

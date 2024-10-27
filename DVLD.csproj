@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Applications\ctrlApplicationBasicInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Applications\ctrlApplicationBasicInfo.Designer.cs">
+      <DependentUpon>ctrlApplicationBasicInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="btnExit.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -63,6 +69,24 @@
       <DependentUpon>btnExit.cs</DependentUpon>
     </Compile>
     <Compile Include="clsCurrentUserInfo.cs" />
+    <Compile Include="frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalDriverLicenseApplications\ctrlDrivinLicenseApplicationInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LocalDriverLicenseApplications\ctrlDrivinLicenseApplicationInfo.Designer.cs">
+      <DependentUpon>ctrlDrivinLicenseApplicationInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalDriverLicenseApplications\ctrlLocalDrivingLicenseAppInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LocalDriverLicenseApplications\ctrlLocalDrivingLicenseAppInfo.Designer.cs">
+      <DependentUpon>ctrlLocalDrivingLicenseAppInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="LocalDriverLicenseApplications\frmAddNewLocalDrivingApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,16 +105,16 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage Application Types\frmEditApplicationType.cs">
+    <Compile Include="Applications\frmEditApplicationType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage Application Types\frmEditApplicationType.Designer.cs">
+    <Compile Include="Applications\frmEditApplicationType.Designer.cs">
       <DependentUpon>frmEditApplicationType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage Application Types\frmManageApplicationTypes.cs">
+    <Compile Include="Applications\frmManageApplicationTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage Application Types\frmManageApplicationTypes.Designer.cs">
+    <Compile Include="Applications\frmManageApplicationTypes.Designer.cs">
       <DependentUpon>frmManageApplicationTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="Manage Test type\frmEditTestType.cs">
@@ -149,6 +173,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\frmVisonTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\frmVisonTest.Designer.cs">
+      <DependentUpon>frmVisonTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\ctrlLoginInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -191,6 +221,18 @@
     <Compile Include="Users\frmManageUsers.Designer.cs">
       <DependentUpon>frmManageUsers.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Applications\ctrlApplicationBasicInfo.resx">
+      <DependentUpon>ctrlApplicationBasicInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalDriverLicenseApplications\ctrlDrivinLicenseApplicationInfo.resx">
+      <DependentUpon>ctrlDrivinLicenseApplicationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalDriverLicenseApplications\ctrlLocalDrivingLicenseAppInfo.resx">
+      <DependentUpon>ctrlLocalDrivingLicenseAppInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LocalDriverLicenseApplications\frmAddNewLocalDrivingApplication.resx">
       <DependentUpon>frmAddNewLocalDrivingApplication.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,10 +242,10 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage Application Types\frmEditApplicationType.resx">
+    <EmbeddedResource Include="Applications\frmEditApplicationType.resx">
       <DependentUpon>frmEditApplicationType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage Application Types\frmManageApplicationTypes.resx">
+    <EmbeddedResource Include="Applications\frmManageApplicationTypes.resx">
       <DependentUpon>frmManageApplicationTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage Test type\frmEditTestType.resx">
@@ -240,6 +282,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Tests\frmVisonTest.resx">
+      <DependentUpon>frmVisonTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Users\ctrlLoginInformation.resx">
       <DependentUpon>ctrlLoginInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,6 +396,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\New Application 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vision 512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

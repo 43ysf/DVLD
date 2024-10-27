@@ -45,6 +45,9 @@
             this.deleteApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.schdualTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.schdualAVisionTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.schdualAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.schdualAStreetTTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListLicenseApplications)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -199,7 +202,7 @@
             this.cancelApplicationToolStripMenuItem,
             this.schdualTestToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(246, 124);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(246, 152);
             // 
             // showApplicationDetailsToolStripMenuItem
             // 
@@ -228,10 +231,33 @@
             // 
             // schdualTestToolStripMenuItem
             // 
+            this.schdualTestToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.schdualAVisionTestToolStripMenuItem,
+            this.schdualAToolStripMenuItem,
+            this.schdualAStreetTTestToolStripMenuItem});
             this.schdualTestToolStripMenuItem.Name = "schdualTestToolStripMenuItem";
             this.schdualTestToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
             this.schdualTestToolStripMenuItem.Text = "Sechduale Test";
             this.schdualTestToolStripMenuItem.Click += new System.EventHandler(this.schdualTestToolStripMenuItem_Click);
+            // 
+            // schdualAVisionTestToolStripMenuItem
+            // 
+            this.schdualAVisionTestToolStripMenuItem.Name = "schdualAVisionTestToolStripMenuItem";
+            this.schdualAVisionTestToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.schdualAVisionTestToolStripMenuItem.Text = "Schdual a vision Test";
+            this.schdualAVisionTestToolStripMenuItem.Click += new System.EventHandler(this.schdualAVisionTestToolStripMenuItem_Click);
+            // 
+            // schdualAToolStripMenuItem
+            // 
+            this.schdualAToolStripMenuItem.Name = "schdualAToolStripMenuItem";
+            this.schdualAToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.schdualAToolStripMenuItem.Text = "Schdual a written Test";
+            // 
+            // schdualAStreetTTestToolStripMenuItem
+            // 
+            this.schdualAStreetTTestToolStripMenuItem.Name = "schdualAStreetTTestToolStripMenuItem";
+            this.schdualAStreetTTestToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.schdualAStreetTTestToolStripMenuItem.Text = "Schdual a street t Test";
             // 
             // frmListLocalDrivingLicenseApplications
             // 
@@ -276,5 +302,8 @@
         private System.Windows.Forms.ToolStripMenuItem deleteApplicationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelApplicationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem schdualTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem schdualAVisionTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem schdualAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem schdualAStreetTTestToolStripMenuItem;
     }
 }
