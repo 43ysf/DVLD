@@ -28,16 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbTitle = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblRecods = new System.Windows.Forms.Label();
             this.btnAddAppointments = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.takeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ctrlLocalDrivingLicenseAppInfo1 = new DVLD.LocalDriverLicenseApplications.ctrlLocalDrivingLicenseAppInfo();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbTitle
@@ -51,18 +56,6 @@
             this.lbTitle.Size = new System.Drawing.Size(465, 42);
             this.lbTitle.TabIndex = 15;
             this.lbTitle.Text = "Vison Test Applointments";
-            this.lbTitle.Click += new System.EventHandler(this.lbTitle_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = global::DVLD.Properties.Resources.Vision_512;
-            this.pictureBox1.Location = new System.Drawing.Point(352, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(211, 78);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
             // 
             // dataGridView1
             // 
@@ -73,6 +66,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(893, 182);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDown);
             // 
             // label1
             // 
@@ -121,6 +115,40 @@
             this.btnAddAppointments.UseVisualStyleBackColor = true;
             this.btnAddAppointments.Click += new System.EventHandler(this.btnAddAppointments_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = global::DVLD.Properties.Resources.Vision_512;
+            this.pictureBox1.Location = new System.Drawing.Point(352, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(171, 78);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editAppointmentToolStripMenuItem,
+            this.takeTestToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
+            // 
+            // takeTestToolStripMenuItem
+            // 
+            this.takeTestToolStripMenuItem.Name = "takeTestToolStripMenuItem";
+            this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.takeTestToolStripMenuItem.Text = "Take Test";
+            this.takeTestToolStripMenuItem.Click += new System.EventHandler(this.takeTestToolStripMenuItem_Click);
+            // 
+            // editAppointmentToolStripMenuItem
+            // 
+            this.editAppointmentToolStripMenuItem.Name = "editAppointmentToolStripMenuItem";
+            this.editAppointmentToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.editAppointmentToolStripMenuItem.Text = "Edit ";
+            this.editAppointmentToolStripMenuItem.Click += new System.EventHandler(this.editAppointmentToolStripMenuItem_Click);
+            // 
             // ctrlLocalDrivingLicenseAppInfo1
             // 
             this.ctrlLocalDrivingLicenseAppInfo1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -146,8 +174,9 @@
             this.MinimizeBox = false;
             this.Name = "frmVisonTest";
             this.Text = "frmVisonTest";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,5 +192,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblRecods;
         private System.Windows.Forms.Button btnAddAppointments;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem takeTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editAppointmentToolStripMenuItem;
     }
 }

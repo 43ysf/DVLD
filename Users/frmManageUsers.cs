@@ -63,8 +63,6 @@ namespace DVLD.Users
                     dgvListUsers.ClearSelection();
                     dgvListUsers.Rows[hitTestInfo.RowIndex].Selected = true;
                     contextMenuStrip1.Show(dgvListUsers, e.Location);
-                    var cell = dgvListUsers.SelectedRows[0].Cells["UserID"];
-                    int IDValue = int.Parse(cell.Value.ToString());
                     //contextMenuStrip1.Show();
                 }
 

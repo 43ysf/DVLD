@@ -132,9 +132,6 @@
     <Compile Include="Manage Test type\frmManageTestTypes.Designer.cs">
       <DependentUpon>frmManageTestTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyCustomControls\MyBtn.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="People\ctrlAddNewPerson.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -328,7 +325,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Written Test 32 Sechdule.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\people.png" />
   </ItemGroup>
@@ -406,6 +405,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Vision 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Written Test 512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
