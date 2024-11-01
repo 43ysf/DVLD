@@ -15,6 +15,8 @@ namespace DVLD.Tests
     public partial class frmVisonTest : Form
     {
         private int _LDLAppID = -1;
+
+        int _AppointmentID = -1;
         public frmVisonTest(int LDLAppID)
         {
             InitializeComponent();
@@ -57,19 +59,24 @@ namespace DVLD.Tests
                     dataGridView1.ClearSelection() ;
                     dataGridView1.Rows[HitInfo.RowIndex].Selected = true ;
                     contextMenuStrip1.Show(dataGridView1, e.Location);
+                     _AppointmentID = int.Parse(dataGridView1.SelectedRows[0].Cells["AppointmentID"].Value.ToString());
+
                 }
             }
         }
 
         private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int appID =int.Parse( dataGridView1.SelectedRows[0].Cells["AppointmentID"].Value.ToString());
 
         }
 
         private void editAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int appID = int.Parse(dataGridView1.SelectedRows[0].Cells["AppointmentID"].Value.ToString());
+            if(clsAppointment.IsThereAppointmentNotChecked(_AppointmentID, 1))
+            {
+                frmAddAppointment frm = new frmAddAppointment(_AppointmentID);
+                frm.ShowDialog();
+            }
 
         }
     }

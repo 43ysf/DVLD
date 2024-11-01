@@ -24,15 +24,21 @@ namespace DVLD.Appointments
     {
         clsApplication rApp = null;
         double RAppFees = 0;
+        clsAppointment appointment = null;
 
-        public enum enMode { TakeTest = 0, RetakeTest = 1 }
+        public enum enMode { TakeTest = 0, RetakeTest = 1, UpdateAppointment = 2}
         public enMode Mode { get; set; }
-        public frmAddAppointment(int AppID)
+
+        private clsLocalDrivingLicenseApplication app = null;
+        public frmAddAppointment(int appointmentID)
         {
             InitializeComponent();
+            Mode = enMode.UpdateAppointment;
+            appointment = clsAppointment.Find(appointmentID);
+            app = clsLocalDrivingLicenseApplication.Find(appointment.LocalDrivingLicenseApplicationID);
+            FillData();
         }
-        private clsLocalDrivingLicenseApplication app = null;
-        public frmAddAppointment(int AppID, enMode mode )
+        public frmAddAppointment(int AppID, enMode mode)
         {
             InitializeComponent();
             Mode = mode;
@@ -49,24 +55,33 @@ namespace DVLD.Appointments
             lblDClass.Text = clsLicenseClass.Find(app.LicenseClassID).LicenseClassName;
             lblName.Text = clsPerson.GetFullNamePerson(clsApplication.Find(app.ApplicationID).ApplicationPersonID);
             lblTrial.Text = clsAppointment.GetNumberOfTrials(app.LocalDrivingLicenseApplicationID, 1).ToString();
-            lblFees.Text =  clsTestType.Find(1).TestFees.ToString();
             if(Mode == enMode.TakeTest)
             {
                 lblTotalFees.Text = lblFees.Text;
                 lblRTestAppID.Text = "N/A";
                 lblRAppFees.Text = RAppFees.ToString();
+                lblFees.Text = clsTestType.Find(1).TestFees.ToString();
+
             }
-            else
+            else if(Mode == enMode.TakeTest) 
             {
                 RAppFees = clsApplicationType.Find(8).ApplicationFees;
 
                 lblTotalFees.Text = (RAppFees +  clsTestType.Find(1).TestFees).ToString();
                 lblRTestAppID.Text = rApp.ApplicationID.ToString();
                 lblRAppFees.Text = RAppFees.ToString();
+                lblFees.Text = clsTestType.Find(1).TestFees.ToString();
+
+            }
+            else
+            {
+                lblFees.Text = appointment.PaidFees.ToString();
+                dtpDate.Value = appointment.AppointmentDate;
                 
             }
+
             dtpDate.MinDate = DateTime.Now;
-            
+
         }
 
 
@@ -80,22 +95,27 @@ namespace DVLD.Appointments
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            clsAppointment appointment = new clsAppointment();
-            appointment.LocalDrivingLicenseApplicationID = Convert.ToInt32(lblDLAppID.Text) ;
-            appointment.IsLocked = false;
+            if(Mode == enMode.TakeTest || Mode == enMode.RetakeTest)
+            {
+
+                appointment = new clsAppointment();
+                appointment.LocalDrivingLicenseApplicationID = Convert.ToInt32(lblDLAppID.Text) ;
+                appointment.IsLocked = false;
+                appointment.CreatedByUserID = clsCurrentUserInfo.CurrentUserID;
+                appointment.PaidFees = Convert.ToDecimal(lblTotalFees.Text);
+                appointment.TestTypeID = 1;
+            }
             appointment.AppointmentDate = (DateTime)dtpDate.Value;
-            appointment.CreatedByUserID = clsCurrentUserInfo.CurrentUserID;
-            appointment.PaidFees = Convert.ToDecimal(lblTotalFees.Text);
-            appointment.TestTypeID = 1;
 
             if (Mode == enMode.TakeTest)
             {
                if( appointment.Save())
                 {
+                    this.Mode = enMode.UpdateAppointment;
                     MessageBox.Show("Appointment Added successfully");
                 }
             }
-            else
+            else if (Mode == enMode.RetakeTest) 
             {
                 rApp.ApplicationDate = DateTime.Now;
                 rApp.PaidFees = RAppFees;
@@ -110,7 +130,16 @@ namespace DVLD.Appointments
                     {
                         lblRTestAppID.Text = appointment.TestAppointmentID.ToString();
                         MessageBox.Show("Appointment Added Successfully");
+                        Mode = enMode.UpdateAppointment;
                     }
+                }
+            }
+            else
+            {
+                appointment.AppointmentDate = dtpDate.Value;
+                if(appointment.Save())
+                {
+                    MessageBox.Show("Appointment saved successfuly");
                 }
             }
         }
