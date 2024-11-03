@@ -1,9 +1,12 @@
 ﻿using DVLD.Appointments;
 using DVLD_Business.Appointments;
+using DVLD_Business.LocalDrivingLicenseApplications;
+using DVLD_Business.Tests;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,13 +18,16 @@ namespace DVLD.Tests
     public partial class frmVisonTest : Form
     {
         private int _LDLAppID = -1;
-
         int _AppointmentID = -1;
+        clsLocalDrivingLicenseApplication application = null;
+        clsAppointment TestAppointment = null;
         public frmVisonTest(int LDLAppID)
         {
             InitializeComponent();
             ctrlLocalDrivingLicenseAppInfo1.FillData(LDLAppID);
             _LDLAppID = LDLAppID;
+            application = clsLocalDrivingLicenseApplication.Find(LDLAppID);
+
             FillDataGridViewData();
         }
 
@@ -45,8 +51,44 @@ namespace DVLD.Tests
 
         private void btnAddAppointments_Click(object sender, EventArgs e)
         {
-            frmAddAppointment frm = new frmAddAppointment(_LDLAppID, frmAddAppointment.enMode.TakeTest) ;
-            frm.ShowDialog();
+            DataTable dt = clsAppointment.GettAllAppointments(_LDLAppID, 1);
+            if(dt.Rows.Count > 0)
+            {
+
+                if (clsAppointment.IsThereAppointmentNotChecked(_LDLAppID, 1))
+                {
+                    MessageBox.Show("There Is Active Appointment");
+                    return;
+
+
+
+                }
+                else
+                {
+                    int TestAppointmentID = -1;
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        TestAppointmentID = (int)dr["TestAppointmentID"];
+                        if (clsTest.IsTestDone(TestAppointmentID))
+                        {
+                            MessageBox.Show("Person Already Passed this Tests");
+                            return ;
+                        
+                        }
+                    }
+                    frmAddAppointment frm = new frmAddAppointment(_LDLAppID, frmAddAppointment.enMode.RetakeTest) ;
+                    frm.ShowDialog();
+                }
+            }
+            else
+            {
+                frmAddAppointment frm = new frmAddAppointment(_LDLAppID, frmAddAppointment.enMode.TakeTest);
+                frm.ShowDialog();
+            }
+
+            
+          
+
         }
 
         private void dataGridView1_MouseDown(object sender, MouseEventArgs e)
@@ -67,12 +109,13 @@ namespace DVLD.Tests
 
         private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmTakeVisionTest frm = new frmTakeVisionTest(_AppointmentID, frmTakeVisionTest.enMod.VisionTest);
+            frm.ShowDialog();
         }
 
         private void editAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(clsAppointment.IsThereAppointmentNotChecked(_AppointmentID, 1))
+            if(!clsAppointment.Find(_AppointmentID).IsLocked)
             {
                 frmAddAppointment frm = new frmAddAppointment(_AppointmentID);
                 frm.ShowDialog();

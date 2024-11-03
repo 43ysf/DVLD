@@ -176,6 +176,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\frmTakeVisionTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\frmTakeVisionTest.Designer.cs">
+      <DependentUpon>frmTakeVisionTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tests\frmVisonTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +294,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Tests\frmTakeVisionTest.resx">
+      <DependentUpon>frmTakeVisionTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tests\frmVisonTest.resx">
       <DependentUpon>frmVisonTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -408,6 +417,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Written Test 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driving-test 512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

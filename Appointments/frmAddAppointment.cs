@@ -25,7 +25,6 @@ namespace DVLD.Appointments
         clsApplication rApp = null;
         double RAppFees = 0;
         clsAppointment appointment = null;
-
         public enum enMode { TakeTest = 0, RetakeTest = 1, UpdateAppointment = 2}
         public enMode Mode { get; set; }
 
@@ -46,7 +45,6 @@ namespace DVLD.Appointments
             app = clsLocalDrivingLicenseApplication.Find(AppID);
             FillData();
         }
-
         public void FillData()
         {
             
@@ -55,12 +53,13 @@ namespace DVLD.Appointments
             lblDClass.Text = clsLicenseClass.Find(app.LicenseClassID).LicenseClassName;
             lblName.Text = clsPerson.GetFullNamePerson(clsApplication.Find(app.ApplicationID).ApplicationPersonID);
             lblTrial.Text = clsAppointment.GetNumberOfTrials(app.LocalDrivingLicenseApplicationID, 1).ToString();
+
             if(Mode == enMode.TakeTest)
             {
+                lblFees.Text = clsTestType.Find(1).TestFees.ToString();
                 lblTotalFees.Text = lblFees.Text;
                 lblRTestAppID.Text = "N/A";
                 lblRAppFees.Text = RAppFees.ToString();
-                lblFees.Text = clsTestType.Find(1).TestFees.ToString();
 
             }
             else if(Mode == enMode.TakeTest) 
@@ -84,10 +83,6 @@ namespace DVLD.Appointments
 
         }
 
-
-
-
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -101,6 +96,7 @@ namespace DVLD.Appointments
                 appointment = new clsAppointment();
                 appointment.LocalDrivingLicenseApplicationID = Convert.ToInt32(lblDLAppID.Text) ;
                 appointment.IsLocked = false;
+               
                 appointment.CreatedByUserID = clsCurrentUserInfo.CurrentUserID;
                 appointment.PaidFees = Convert.ToDecimal(lblTotalFees.Text);
                 appointment.TestTypeID = 1;
