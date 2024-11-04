@@ -62,12 +62,12 @@ namespace DVLD.Appointments
                 lblRAppFees.Text = RAppFees.ToString();
 
             }
-            else if(Mode == enMode.TakeTest) 
+            else if(Mode == enMode.RetakeTest) 
             {
                 RAppFees = clsApplicationType.Find(8).ApplicationFees;
 
                 lblTotalFees.Text = (RAppFees +  clsTestType.Find(1).TestFees).ToString();
-                lblRTestAppID.Text = rApp.ApplicationID.ToString();
+               // lblRTestAppID.Text = rApp.ApplicationID.ToString();
                 lblRAppFees.Text = RAppFees.ToString();
                 lblFees.Text = clsTestType.Find(1).TestFees.ToString();
 
@@ -113,6 +113,7 @@ namespace DVLD.Appointments
             }
             else if (Mode == enMode.RetakeTest) 
             {
+                rApp = new clsApplication();
                 rApp.ApplicationDate = DateTime.Now;
                 rApp.PaidFees = RAppFees;
                 rApp.ApplicationStatus = 3;

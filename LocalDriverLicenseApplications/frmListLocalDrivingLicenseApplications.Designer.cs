@@ -252,6 +252,7 @@
             this.schdualAToolStripMenuItem.Name = "schdualAToolStripMenuItem";
             this.schdualAToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
             this.schdualAToolStripMenuItem.Text = "Schdual a written Test";
+            this.schdualAToolStripMenuItem.Click += new System.EventHandler(this.schdualAToolStripMenuItem_Click);
             // 
             // schdualAStreetTTestToolStripMenuItem
             // 

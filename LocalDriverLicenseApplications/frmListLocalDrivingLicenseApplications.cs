@@ -17,6 +17,7 @@ namespace DVLD.DriverLicenseApplications
 {
     public partial class frmListLocalDrivingLicenseApplications : Form
     {
+        private int _RowAppID = -1;
         public frmListLocalDrivingLicenseApplications()
         {
             InitializeComponent();
@@ -127,6 +128,7 @@ namespace DVLD.DriverLicenseApplications
                     contextMenuStrip1.Show(dgvListLicenseApplications, e.Location);
                     //var cell = dgvListLicenseApplications.SelectedRows[0].Cells["UserID"];
                     //int IDValue = int.Parse(cell.Value.ToString());
+                    _RowAppID = int.Parse(dgvListLicenseApplications.SelectedRows[0].Cells["L.D.LAppID"].Value.ToString());
 
                 }
             }
@@ -137,6 +139,12 @@ namespace DVLD.DriverLicenseApplications
             int LocalDrivingLicenseApplicationID = (int)dgvListLicenseApplications.SelectedRows[0].Cells["L.D.LAppID"].Value;
 
             frmVisonTest frm = new frmVisonTest(LocalDrivingLicenseApplicationID);
+            frm.ShowDialog();
+        }
+
+        private void schdualAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTestAppointments frm = new frmTestAppointments(frmTestAppointments.enMode.enWrttenTest, _RowAppID);
             frm.ShowDialog();
         }
     }
