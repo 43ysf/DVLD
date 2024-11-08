@@ -3,6 +3,7 @@ using DVLD.Tests;
 using DVLD_Business.Applications;
 using DVLD_Business.LocalDrivingLicenseApplications;
 using DVLD_Business.Manage_Test_Types;
+using DVLD_Business.Tests;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -146,6 +147,18 @@ namespace DVLD.DriverLicenseApplications
         {
             frmTestAppointments frm = new frmTestAppointments(frmTestAppointments.enMode.enWrttenTest, _RowAppID);
             frm.ShowDialog();
+        }
+
+        private void schdualAStreetTTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTestAppointments frm = new frmTestAppointments(frmTestAppointments.enMode.enStreetTest, _RowAppID);
+            frm.ShowDialog();
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            foreach (ToolStripItem item in contextMenuStrip1.Items) { MessageBox.Show($"Item Name: {item.Name}"); }
         }
     }
 }

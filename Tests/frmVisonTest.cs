@@ -109,7 +109,7 @@ namespace DVLD.Tests
 
         private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmTakeVisionTest frm = new frmTakeVisionTest(_AppointmentID, frmTakeVisionTest.enMod.VisionTest);
+            frmTakeTest frm = new frmTakeTest(_AppointmentID, frmTakeTest.enMod.VisionTest);
             frm.ShowDialog();
         }
 

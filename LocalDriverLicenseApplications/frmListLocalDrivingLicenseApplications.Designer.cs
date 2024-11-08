@@ -203,6 +203,7 @@
             this.schdualTestToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(246, 152);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // showApplicationDetailsToolStripMenuItem
             // 
@@ -259,6 +260,7 @@
             this.schdualAStreetTTestToolStripMenuItem.Name = "schdualAStreetTTestToolStripMenuItem";
             this.schdualAStreetTTestToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
             this.schdualAStreetTTestToolStripMenuItem.Text = "Schdual a street t Test";
+            this.schdualAStreetTTestToolStripMenuItem.Click += new System.EventHandler(this.schdualAStreetTTestToolStripMenuItem_Click);
             // 
             // frmListLocalDrivingLicenseApplications
             // 

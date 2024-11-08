@@ -68,6 +68,12 @@
     <Compile Include="Appointments\frmAddAppointment.Designer.cs">
       <DependentUpon>frmAddAppointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Appointments\frmAddAppointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointments\frmAddAppointments.Designer.cs">
+      <DependentUpon>frmAddAppointments.cs</DependentUpon>
+    </Compile>
     <Compile Include="btnExit.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -176,11 +182,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\frmTakeVisionTest.cs">
+    <Compile Include="Tests\frmTakeTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tests\frmTakeVisionTest.Designer.cs">
-      <DependentUpon>frmTakeVisionTest.cs</DependentUpon>
+    <Compile Include="Tests\frmTakeTest.Designer.cs">
+      <DependentUpon>frmTakeTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Tests\frmTestAppointments.cs">
       <SubType>Form</SubType>
@@ -242,6 +248,9 @@
     <EmbeddedResource Include="Appointments\frmAddAppointment.resx">
       <DependentUpon>frmAddAppointment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Appointments\frmAddAppointments.resx">
+      <DependentUpon>frmAddAppointments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTest.resx">
       <DependentUpon>frmTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,8 +309,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Tests\frmTakeVisionTest.resx">
-      <DependentUpon>frmTakeVisionTest.cs</DependentUpon>
+    <EmbeddedResource Include="Tests\frmTakeTest.resx">
+      <DependentUpon>frmTakeTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tests\frmTestAppointments.resx">
       <DependentUpon>frmTestAppointments.cs</DependentUpon>

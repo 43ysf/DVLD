@@ -104,6 +104,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(893, 182);
             this.dataGridView1.TabIndex = 24;
+            this.dataGridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDown);
             // 
             // lbTitle
             // 
@@ -135,7 +136,7 @@
             this.editAppointmentToolStripMenuItem,
             this.takeTestToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(138, 52);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
             // 
             // editAppointmentToolStripMenuItem
             // 
@@ -148,6 +149,7 @@
             this.takeTestToolStripMenuItem.Name = "takeTestToolStripMenuItem";
             this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.takeTestToolStripMenuItem.Text = "Take Test";
+            this.takeTestToolStripMenuItem.Click += new System.EventHandler(this.takeTestToolStripMenuItem_Click);
             // 
             // ctrlLocalDrivingLicenseAppInfo1
             // 
@@ -172,6 +174,7 @@
             this.Controls.Add(this.ctrlLocalDrivingLicenseAppInfo1);
             this.Name = "frmTestAppointments";
             this.Text = "frmTestAppointments";
+            this.Load += new System.EventHandler(this.frmTestAppointments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTestIcon)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

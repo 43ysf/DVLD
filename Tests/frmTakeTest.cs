@@ -17,13 +17,13 @@ using System.Windows.Forms;
 
 namespace DVLD.Tests
 {
-    public partial class frmTakeVisionTest : Form
+    public partial class frmTakeTest : Form
     {
         public enum enMod { VisionTest = 1, WrittenTest = 2, StreetTest = 3 }
         enMod Mode = enMod.VisionTest;
         clsTest _Test = null;
         clsAppointment _app = null;
-        public frmTakeVisionTest(int TestAppointmentID, enMod mode)
+        public frmTakeTest(int TestAppointmentID, enMod mode)
         {
             InitializeComponent();
             _app = clsAppointment.Find(TestAppointmentID);

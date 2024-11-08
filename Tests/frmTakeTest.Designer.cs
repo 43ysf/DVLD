@@ -1,6 +1,6 @@
 ﻿namespace DVLD.Tests
 {
-    partial class frmTakeVisionTest
+    partial class frmTakeTest
     {
         /// <summary>
         /// Required designer variable.
