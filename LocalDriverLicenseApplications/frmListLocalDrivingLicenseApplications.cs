@@ -126,18 +126,21 @@ namespace DVLD.DriverLicenseApplications
 
             frmVisonTest frm = new frmVisonTest(LocalDrivingLicenseApplicationID);
             frm.ShowDialog();
+            _FillDataGirdView();
         }
 
         private void schdualAToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmTestAppointments frm = new frmTestAppointments(frmTestAppointments.enMode.enWrttenTest, _RowAppID);
             frm.ShowDialog();
+            _FillDataGirdView();
         }
 
         private void schdualAStreetTTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmTestAppointments frm = new frmTestAppointments(frmTestAppointments.enMode.enStreetTest, _RowAppID);
             frm.ShowDialog();
+            _FillDataGirdView();
 
         }
 
@@ -212,6 +215,14 @@ namespace DVLD.DriverLicenseApplications
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
             //MySchualShows();
+        }
+
+        private void issueDrivingLicenseFirstTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(_LDLApp.GetPassedTest() == 3)
+            {
+
+            }
         }
     }
 }

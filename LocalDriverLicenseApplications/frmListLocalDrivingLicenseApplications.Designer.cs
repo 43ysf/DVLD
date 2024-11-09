@@ -48,6 +48,7 @@
             this.schdualVisionTest = new System.Windows.Forms.ToolStripMenuItem();
             this.schdualWrittenTest = new System.Windows.Forms.ToolStripMenuItem();
             this.schdualStreetTest = new System.Windows.Forms.ToolStripMenuItem();
+            this.issueDrivingLicenseFirstTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListLicenseApplications)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -200,33 +201,34 @@
             this.editApplicationToolStripMenuItem,
             this.deleteApplicationToolStripMenuItem,
             this.cancel,
-            this.schdualTest});
+            this.schdualTest,
+            this.issueDrivingLicenseFirstTimeToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(246, 152);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(293, 176);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // showApplicationDetailsToolStripMenuItem
             // 
             this.showApplicationDetailsToolStripMenuItem.Name = "showApplicationDetailsToolStripMenuItem";
-            this.showApplicationDetailsToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
+            this.showApplicationDetailsToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
             this.showApplicationDetailsToolStripMenuItem.Text = "Show Application Details";
             // 
             // editApplicationToolStripMenuItem
             // 
             this.editApplicationToolStripMenuItem.Name = "editApplicationToolStripMenuItem";
-            this.editApplicationToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
+            this.editApplicationToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
             this.editApplicationToolStripMenuItem.Text = "Edit Application";
             // 
             // deleteApplicationToolStripMenuItem
             // 
             this.deleteApplicationToolStripMenuItem.Name = "deleteApplicationToolStripMenuItem";
-            this.deleteApplicationToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
+            this.deleteApplicationToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
             this.deleteApplicationToolStripMenuItem.Text = "Delete Application";
             // 
             // cancel
             // 
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(245, 24);
+            this.cancel.Size = new System.Drawing.Size(292, 24);
             this.cancel.Text = "Cancel Application";
             this.cancel.Click += new System.EventHandler(this.cancelApplicationToolStripMenuItem_Click);
             // 
@@ -237,7 +239,7 @@
             this.schdualWrittenTest,
             this.schdualStreetTest});
             this.schdualTest.Name = "schdualTest";
-            this.schdualTest.Size = new System.Drawing.Size(245, 24);
+            this.schdualTest.Size = new System.Drawing.Size(292, 24);
             this.schdualTest.Text = "Sechduale Test";
             this.schdualTest.Click += new System.EventHandler(this.schdualTestToolStripMenuItem_Click);
             // 
@@ -261,6 +263,13 @@
             this.schdualStreetTest.Size = new System.Drawing.Size(236, 26);
             this.schdualStreetTest.Text = "Schdual a street t Test";
             this.schdualStreetTest.Click += new System.EventHandler(this.schdualAStreetTTestToolStripMenuItem_Click);
+            // 
+            // issueDrivingLicenseFirstTimeToolStripMenuItem
+            // 
+            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Name = "issueDrivingLicenseFirstTimeToolStripMenuItem";
+            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
+            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Text = "Issue Driving License (First Time)";
+            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Click += new System.EventHandler(this.issueDrivingLicenseFirstTimeToolStripMenuItem_Click);
             // 
             // frmListLocalDrivingLicenseApplications
             // 
@@ -308,5 +317,6 @@
         private System.Windows.Forms.ToolStripMenuItem schdualVisionTest;
         private System.Windows.Forms.ToolStripMenuItem schdualWrittenTest;
         private System.Windows.Forms.ToolStripMenuItem schdualStreetTest;
+        private System.Windows.Forms.ToolStripMenuItem issueDrivingLicenseFirstTimeToolStripMenuItem;
     }
 }
