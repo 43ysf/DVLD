@@ -78,10 +78,9 @@ namespace DVLD.Appointments
             }
         }
 
-
-
         private void _Save()
         {
+
             if(Mode != enMode.Update)
             {
                 _Appointment = new clsAppointment();
@@ -97,6 +96,8 @@ namespace DVLD.Appointments
                 _Appointment.AppointmentDate = dtpDate.Value;
                 if(_Appointment.Save())
                 {
+                    _Application.UpdateLastStatus();
+
                     MessageBox.Show("Appointment Updated Successfuly ");
                     return;
                 }
@@ -111,10 +112,12 @@ namespace DVLD.Appointments
                 RetakeApp.ApplicationType = 8;
                 RetakeApp.PaidFees = clsApplicationType.Find(8).ApplicationFees;
                 RetakeApp.LastStatusDate = DateTime.Now;
-                if(RetakeApp.AddNew())
+                if(RetakeApp.Save())
                 {
                    if( _Appointment.Save())
                     {
+                        _Application.UpdateLastStatus();
+
                         MessageBox.Show("Appointment Added successfuly !");
                         Mode = enMode.Update;
                         lblRTestAppID.Text = _Appointment.TestAppointmentID.ToString();
@@ -126,7 +129,11 @@ namespace DVLD.Appointments
                 if(_Appointment.Save())
                 {
                     MessageBox.Show("Appointment Saved Successfully");
+                    _Application.UpdateLastStatus();
+              
                     Mode = enMode.Update;
+                    _Application.UpdateLastStatus();
+
                 }
             }
 
@@ -134,6 +141,11 @@ namespace DVLD.Appointments
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if(TestAppointmentType == enTestAppointmentType.StreetTest && clsLocalDrivingLicenseApplication.GetPassedTest(_LDLApp.LocalDrivingLicenseApplicationID) == 2)
+            {
+                _Application.ApplicationStatus = 3;
+                _Application.UpdateLastStatus();
+            }
             _Save();
         }
 

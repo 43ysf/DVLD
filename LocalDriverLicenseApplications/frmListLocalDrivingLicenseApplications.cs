@@ -1,6 +1,7 @@
 ﻿using DVLD.LocalDriverLicenseApplications;
 using DVLD.Tests;
 using DVLD_Business.Applications;
+using DVLD_Business.Appointments;
 using DVLD_Business.LocalDrivingLicenseApplications;
 using DVLD_Business.Manage_Test_Types;
 using DVLD_Business.Tests;
@@ -19,6 +20,7 @@ namespace DVLD.DriverLicenseApplications
     public partial class frmListLocalDrivingLicenseApplications : Form
     {
         private int _RowAppID = -1;
+        private clsLocalDrivingLicenseApplication _LDLApp = null;
         public frmListLocalDrivingLicenseApplications()
         {
             InitializeComponent();
@@ -117,23 +119,6 @@ namespace DVLD.DriverLicenseApplications
             
         }
 
-        private void dgvListLicenseApplications_MouseDown(object sender, MouseEventArgs e)
-        {
-            if(e.Button == MouseButtons.Right)
-            {
-                var hitPose = dgvListLicenseApplications.HitTest(e.X, e.Y);
-                if(hitPose.RowIndex >= 0)
-                {
-                    dgvListLicenseApplications.ClearSelection();
-                    dgvListLicenseApplications.Rows[hitPose.RowIndex].Selected = true;
-                    contextMenuStrip1.Show(dgvListLicenseApplications, e.Location);
-                    //var cell = dgvListLicenseApplications.SelectedRows[0].Cells["UserID"];
-                    //int IDValue = int.Parse(cell.Value.ToString());
-                    _RowAppID = int.Parse(dgvListLicenseApplications.SelectedRows[0].Cells["L.D.LAppID"].Value.ToString());
-
-                }
-            }
-        }
 
         private void schdualAVisionTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -156,9 +141,77 @@ namespace DVLD.DriverLicenseApplications
 
         }
 
+        private void dgvListLicenseApplications_MouseDown(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Right)
+            {
+                var hitPose = dgvListLicenseApplications.HitTest(e.X, e.Y);
+                if(hitPose.RowIndex >= 0)
+                {
+                    dgvListLicenseApplications.ClearSelection();
+                    dgvListLicenseApplications.Rows[hitPose.RowIndex].Selected = true;
+                    contextMenuStrip1.Show(dgvListLicenseApplications, e.Location);
+                    //var cell = dgvListLicenseApplications.SelectedRows[0].Cells["UserID"];
+                    //int IDValue = int.Parse(cell.Value.ToString());
+                    _RowAppID = int.Parse(dgvListLicenseApplications.SelectedRows[0].Cells["L.D.LAppID"].Value.ToString());
+                    _LDLApp = clsLocalDrivingLicenseApplication.Find(_RowAppID);
+                    if(_LDLApp != null )
+                        MySchualShows();
+                   
+                }
+            }
+        }
+
+        private void MySchualShows()
+        {
+            int numOfTrials = clsLocalDrivingLicenseApplication.GetPassedTest(_RowAppID);
+            ToolStripMenuItem item = (ToolStripMenuItem)contextMenuStrip1.Items["schdualTest"];
+            ToolStripMenuItem item1 = (ToolStripMenuItem)contextMenuStrip1.Items["cancel"];
+            if (numOfTrials == 3 || clsApplication.Find(_LDLApp.ApplicationID).ApplicationStatus == 2)
+            {
+                item.Enabled = false;
+                item1.Enabled = false;
+                return;
+            }
+            else
+            {
+                item.Enabled = true;
+
+            }
+            ToolStripMenuItem subItem1 = (ToolStripMenuItem)item.DropDownItems["schdualVisionTest"];
+            ToolStripMenuItem subItem2 = (ToolStripMenuItem)item.DropDownItems["schdualWrittenTest"];
+            ToolStripMenuItem subItem3 = (ToolStripMenuItem)item.DropDownItems["schdualStreetTest"];
+
+            switch (numOfTrials)
+            {
+                case 0:
+                    subItem1.Enabled = true;
+                    subItem2.Enabled = false;
+                    subItem3.Enabled = false;
+                    break;
+
+                case 1:
+                    subItem1.Enabled = false;
+                    subItem2.Enabled = true;
+                    subItem3.Enabled = false;
+                    break;
+                case 2:
+                    subItem2.Enabled = false;
+                    subItem3.Enabled = true;
+                    subItem1.Enabled = false;
+                    break;
+                case 3:
+                    item.Enabled = false;
+                    break;
+
+
+            }
+
+
+        }
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
-            foreach (ToolStripItem item in contextMenuStrip1.Items) { MessageBox.Show($"Item Name: {item.Name}"); }
+            //MySchualShows();
         }
     }
 }

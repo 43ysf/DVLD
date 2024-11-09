@@ -121,7 +121,7 @@ namespace DVLD.Appointments
                 rApp.ApplicationType = 8;
                 rApp.CreatedBy = clsCurrentUserInfo.CurrentUserID;
                 rApp.ApplicationPersonID = clsApplication.Find(app.ApplicationID).ApplicationPersonID;
-                if(rApp.AddNew())
+                if(rApp.Save())
                 {
                     if(appointment.Save())
                     {

@@ -110,7 +110,7 @@ namespace DVLD.LocalDriverLicenseApplications
                 app.ApplicationPersonID = _PersonID;
                 app.LastStatusDate = app.ApplicationDate;
                 app.ApplicationType = clsApplicationType.Find(1).ApplictionTypeID;
-                if (app.AddNew())
+                if (app.Save())
                 {
                     dla.ApplicationID = app.ApplicationID;
                     dla.LicenseClassID = (int)cbLicenseClasses.SelectedValue;

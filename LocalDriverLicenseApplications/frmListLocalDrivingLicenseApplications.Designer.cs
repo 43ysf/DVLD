@@ -43,11 +43,11 @@
             this.showApplicationDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cancelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.schdualTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.schdualAVisionTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.schdualAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.schdualAStreetTTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancel = new System.Windows.Forms.ToolStripMenuItem();
+            this.schdualTest = new System.Windows.Forms.ToolStripMenuItem();
+            this.schdualVisionTest = new System.Windows.Forms.ToolStripMenuItem();
+            this.schdualWrittenTest = new System.Windows.Forms.ToolStripMenuItem();
+            this.schdualStreetTest = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListLicenseApplications)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -199,8 +199,8 @@
             this.showApplicationDetailsToolStripMenuItem,
             this.editApplicationToolStripMenuItem,
             this.deleteApplicationToolStripMenuItem,
-            this.cancelApplicationToolStripMenuItem,
-            this.schdualTestToolStripMenuItem});
+            this.cancel,
+            this.schdualTest});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(246, 152);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
@@ -223,44 +223,44 @@
             this.deleteApplicationToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
             this.deleteApplicationToolStripMenuItem.Text = "Delete Application";
             // 
-            // cancelApplicationToolStripMenuItem
+            // cancel
             // 
-            this.cancelApplicationToolStripMenuItem.Name = "cancelApplicationToolStripMenuItem";
-            this.cancelApplicationToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
-            this.cancelApplicationToolStripMenuItem.Text = "Cancel Application";
-            this.cancelApplicationToolStripMenuItem.Click += new System.EventHandler(this.cancelApplicationToolStripMenuItem_Click);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(245, 24);
+            this.cancel.Text = "Cancel Application";
+            this.cancel.Click += new System.EventHandler(this.cancelApplicationToolStripMenuItem_Click);
             // 
-            // schdualTestToolStripMenuItem
+            // schdualTest
             // 
-            this.schdualTestToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.schdualAVisionTestToolStripMenuItem,
-            this.schdualAToolStripMenuItem,
-            this.schdualAStreetTTestToolStripMenuItem});
-            this.schdualTestToolStripMenuItem.Name = "schdualTestToolStripMenuItem";
-            this.schdualTestToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
-            this.schdualTestToolStripMenuItem.Text = "Sechduale Test";
-            this.schdualTestToolStripMenuItem.Click += new System.EventHandler(this.schdualTestToolStripMenuItem_Click);
+            this.schdualTest.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.schdualVisionTest,
+            this.schdualWrittenTest,
+            this.schdualStreetTest});
+            this.schdualTest.Name = "schdualTest";
+            this.schdualTest.Size = new System.Drawing.Size(245, 24);
+            this.schdualTest.Text = "Sechduale Test";
+            this.schdualTest.Click += new System.EventHandler(this.schdualTestToolStripMenuItem_Click);
             // 
-            // schdualAVisionTestToolStripMenuItem
+            // schdualVisionTest
             // 
-            this.schdualAVisionTestToolStripMenuItem.Name = "schdualAVisionTestToolStripMenuItem";
-            this.schdualAVisionTestToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
-            this.schdualAVisionTestToolStripMenuItem.Text = "Schdual a vision Test";
-            this.schdualAVisionTestToolStripMenuItem.Click += new System.EventHandler(this.schdualAVisionTestToolStripMenuItem_Click);
+            this.schdualVisionTest.Name = "schdualVisionTest";
+            this.schdualVisionTest.Size = new System.Drawing.Size(236, 26);
+            this.schdualVisionTest.Text = "Schdual a vision Test";
+            this.schdualVisionTest.Click += new System.EventHandler(this.schdualAVisionTestToolStripMenuItem_Click);
             // 
-            // schdualAToolStripMenuItem
+            // schdualWrittenTest
             // 
-            this.schdualAToolStripMenuItem.Name = "schdualAToolStripMenuItem";
-            this.schdualAToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
-            this.schdualAToolStripMenuItem.Text = "Schdual a written Test";
-            this.schdualAToolStripMenuItem.Click += new System.EventHandler(this.schdualAToolStripMenuItem_Click);
+            this.schdualWrittenTest.Name = "schdualWrittenTest";
+            this.schdualWrittenTest.Size = new System.Drawing.Size(236, 26);
+            this.schdualWrittenTest.Text = "Schdual a written Test";
+            this.schdualWrittenTest.Click += new System.EventHandler(this.schdualAToolStripMenuItem_Click);
             // 
-            // schdualAStreetTTestToolStripMenuItem
+            // schdualStreetTest
             // 
-            this.schdualAStreetTTestToolStripMenuItem.Name = "schdualAStreetTTestToolStripMenuItem";
-            this.schdualAStreetTTestToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
-            this.schdualAStreetTTestToolStripMenuItem.Text = "Schdual a street t Test";
-            this.schdualAStreetTTestToolStripMenuItem.Click += new System.EventHandler(this.schdualAStreetTTestToolStripMenuItem_Click);
+            this.schdualStreetTest.Name = "schdualStreetTest";
+            this.schdualStreetTest.Size = new System.Drawing.Size(236, 26);
+            this.schdualStreetTest.Text = "Schdual a street t Test";
+            this.schdualStreetTest.Click += new System.EventHandler(this.schdualAStreetTTestToolStripMenuItem_Click);
             // 
             // frmListLocalDrivingLicenseApplications
             // 
@@ -303,10 +303,10 @@
         private System.Windows.Forms.ToolStripMenuItem showApplicationDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editApplicationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteApplicationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cancelApplicationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem schdualTestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem schdualAVisionTestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem schdualAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem schdualAStreetTTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancel;
+        private System.Windows.Forms.ToolStripMenuItem schdualTest;
+        private System.Windows.Forms.ToolStripMenuItem schdualVisionTest;
+        private System.Windows.Forms.ToolStripMenuItem schdualWrittenTest;
+        private System.Windows.Forms.ToolStripMenuItem schdualStreetTest;
     }
 }

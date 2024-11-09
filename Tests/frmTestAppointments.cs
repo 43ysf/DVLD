@@ -20,12 +20,18 @@ namespace DVLD.Tests
         public enMode Mode;
         private clsLocalDrivingLicenseApplication _LDLApp = null;
         private int _AppointmentID = -1;
+        int _TestTypeID = -1;
+        frmAddAppointments.enTestAppointmentType TestTypeAppointment;
+
         public frmTestAppointments(enMode mode, int LDLAppID)
         {
             InitializeComponent();
             _LDLApp = clsLocalDrivingLicenseApplication.Find(LDLAppID);
             Mode = mode;
             ctrlLocalDrivingLicenseAppInfo1.FillData(LDLAppID);
+            _TestTypeID = Mode == enMode.enVisonTest ? 1 : Mode == enMode.enWrttenTest ? 2 : 3;
+            TestTypeAppointment = Mode == enMode.enVisonTest ? frmAddAppointments.enTestAppointmentType.VisionTest : Mode == enMode.enWrttenTest ? frmAddAppointments.enTestAppointmentType.WrittenTest : frmAddAppointments.enTestAppointmentType.StreetTest;
+
 
             _FilData();
             _FillDataGridView();
@@ -51,7 +57,8 @@ namespace DVLD.Tests
         }
         private void _FillDataGridView()
         {
-            DataTable dt = clsAppointment.GettAllAppointments(_LDLApp.LocalDrivingLicenseApplicationID, 2);
+            //_TestTypeID = Mode == enMode.enVisonTest ? 1 : Mode == enMode.enWrttenTest ? 2 : 3;
+            DataTable dt = clsAppointment.GettAllAppointments(_LDLApp.LocalDrivingLicenseApplicationID, _TestTypeID);
             dataGridView1.Columns.Clear();
             dataGridView1.Columns.Add("AppointmentID", "AppointmentID");
             dataGridView1.Columns.Add("AppointmentDate", "AppointmentDate");
@@ -70,12 +77,12 @@ namespace DVLD.Tests
         }
         private void btnAddAppointments_Click(object sender, EventArgs e)
         {
-            DataTable dt = clsAppointment.GettAllAppointments(_LDLApp.LocalDrivingLicenseApplicationID, 2);
+            DataTable dt = clsAppointment.GettAllAppointments(_LDLApp.LocalDrivingLicenseApplicationID, _TestTypeID);
 
             if(dt.Rows.Count > 0)
             {
 
-                if (clsAppointment.IsThereAppointmentNotChecked(_LDLApp.LocalDrivingLicenseApplicationID, 2))
+                if (clsAppointment.IsThereAppointmentNotChecked(_LDLApp.LocalDrivingLicenseApplicationID, _TestTypeID))
                 {
                     MessageBox.Show("There is active appointment");
                     return;
@@ -93,18 +100,22 @@ namespace DVLD.Tests
                 
                 }
 
-                frmAddAppointments frm = new frmAddAppointments(_LDLApp.LocalDrivingLicenseApplicationID, frmAddAppointments.enMode.RetakeTest, frmAddAppointments.enTestAppointmentType.WrittenTest);
+                frmAddAppointments frm = new frmAddAppointments(_LDLApp.LocalDrivingLicenseApplicationID, frmAddAppointments.enMode.RetakeTest, TestTypeAppointment);
                 frm.ShowDialog();
-            
+                _FillDataGridView();
+
             }
             else
             {
 
-                frmAddAppointments frm = new frmAddAppointments(_LDLApp.LocalDrivingLicenseApplicationID, frmAddAppointments.enMode.AddNew, frmAddAppointments.enTestAppointmentType.WrittenTest);
+                frmAddAppointments frm = new frmAddAppointments(_LDLApp.LocalDrivingLicenseApplicationID, frmAddAppointments.enMode.AddNew, TestTypeAppointment);
                 frm.ShowDialog();
+                _FillDataGridView();
 
             }
 
+
+            _FillDataGridView();
 
 
         }
