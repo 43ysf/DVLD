@@ -48,7 +48,7 @@
             this.schdualVisionTest = new System.Windows.Forms.ToolStripMenuItem();
             this.schdualWrittenTest = new System.Windows.Forms.ToolStripMenuItem();
             this.schdualStreetTest = new System.Windows.Forms.ToolStripMenuItem();
-            this.issueDrivingLicenseFirstTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.IssuDrivingLicense = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListLicenseApplications)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -202,7 +202,7 @@
             this.deleteApplicationToolStripMenuItem,
             this.cancel,
             this.schdualTest,
-            this.issueDrivingLicenseFirstTimeToolStripMenuItem});
+            this.IssuDrivingLicense});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(293, 176);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
@@ -264,12 +264,12 @@
             this.schdualStreetTest.Text = "Schdual a street t Test";
             this.schdualStreetTest.Click += new System.EventHandler(this.schdualAStreetTTestToolStripMenuItem_Click);
             // 
-            // issueDrivingLicenseFirstTimeToolStripMenuItem
+            // IssuDrivingLicense
             // 
-            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Name = "issueDrivingLicenseFirstTimeToolStripMenuItem";
-            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
-            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Text = "Issue Driving License (First Time)";
-            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Click += new System.EventHandler(this.issueDrivingLicenseFirstTimeToolStripMenuItem_Click);
+            this.IssuDrivingLicense.Name = "IssuDrivingLicense";
+            this.IssuDrivingLicense.Size = new System.Drawing.Size(292, 24);
+            this.IssuDrivingLicense.Text = "Issue Driving License (First Time)";
+            this.IssuDrivingLicense.Click += new System.EventHandler(this.issueDrivingLicenseFirstTimeToolStripMenuItem_Click);
             // 
             // frmListLocalDrivingLicenseApplications
             // 
@@ -317,6 +317,6 @@
         private System.Windows.Forms.ToolStripMenuItem schdualVisionTest;
         private System.Windows.Forms.ToolStripMenuItem schdualWrittenTest;
         private System.Windows.Forms.ToolStripMenuItem schdualStreetTest;
-        private System.Windows.Forms.ToolStripMenuItem issueDrivingLicenseFirstTimeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem IssuDrivingLicense;
     }
 }

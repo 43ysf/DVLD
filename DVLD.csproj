@@ -87,6 +87,18 @@
     <Compile Include="frmTest.Designer.cs">
       <DependentUpon>frmTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="LicenseManagement\ctrlDriverLicenseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LicenseManagement\ctrlDriverLicenseInfo.Designer.cs">
+      <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LicenseManagement\frmAddLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LicenseManagement\frmAddLicense.Designer.cs">
+      <DependentUpon>frmAddLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="LocalDriverLicenseApplications\ctrlDrivinLicenseApplicationInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -253,6 +265,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest.resx">
       <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseManagement\ctrlDriverLicenseInfo.resx">
+      <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseManagement\frmAddLicense.resx">
+      <DependentUpon>frmAddLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocalDriverLicenseApplications\ctrlDrivinLicenseApplicationInfo.resx">
       <DependentUpon>ctrlDrivinLicenseApplicationInfo.cs</DependentUpon>

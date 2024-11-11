@@ -99,7 +99,12 @@ namespace DVLD.LocalDriverLicenseApplications
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (!clsLocalDrivingLicenseApplication.IsPersonHasTheSamAppOrder(_Person.NationalNo, cbLicenseClasses.Text))
+            if(clsLocalDrivingLicenseApplication.IsPersonHasThisLicense(_Person.PersonID, (int)cbLicenseClasses.SelectedValue))
+            {
+                MessageBox.Show("Person Has License Enter another Application");
+                return;
+            }
+            if (!clsLocalDrivingLicenseApplication.IsPersonHasTheSamAppOrder(_Person.NationalNo, cbLicenseClasses.Text) )
             {
                 MessageBox.Show(cbLicenseClasses.Text);
 

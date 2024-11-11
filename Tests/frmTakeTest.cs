@@ -44,6 +44,7 @@ namespace DVLD.Tests
             _Test.TestResult = rbPass.Checked;
             _Test.CreatedBy = clsCurrentUserInfo.CurrentUserID;
             _Test.TestAppointmentID = _app.TestAppointmentID;
+
             if (_Test.TestID == -1)
             {
 

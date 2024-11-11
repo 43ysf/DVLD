@@ -1,7 +1,10 @@
-﻿using DVLD.LocalDriverLicenseApplications;
+﻿using DVLD.LicenseManagement;
+using DVLD.LocalDriverLicenseApplications;
 using DVLD.Tests;
 using DVLD_Business.Applications;
 using DVLD_Business.Appointments;
+using DVLD_Business.Drivers;
+using DVLD_Business.Licenses;
 using DVLD_Business.LocalDrivingLicenseApplications;
 using DVLD_Business.Manage_Test_Types;
 using DVLD_Business.Tests;
@@ -170,15 +173,21 @@ namespace DVLD.DriverLicenseApplications
             int numOfTrials = clsLocalDrivingLicenseApplication.GetPassedTest(_RowAppID);
             ToolStripMenuItem item = (ToolStripMenuItem)contextMenuStrip1.Items["schdualTest"];
             ToolStripMenuItem item1 = (ToolStripMenuItem)contextMenuStrip1.Items["cancel"];
+            ToolStripMenuItem item2 = (ToolStripMenuItem)contextMenuStrip1.Items["IssuDrivingLicense"];
             if (numOfTrials == 3 || clsApplication.Find(_LDLApp.ApplicationID).ApplicationStatus == 2)
             {
                 item.Enabled = false;
                 item1.Enabled = false;
+                //item2.Enabled = false;
+                
                 return;
             }
             else
             {
                 item.Enabled = true;
+                item1.Enabled =true;
+                item2.Enabled = true;
+
 
             }
             ToolStripMenuItem subItem1 = (ToolStripMenuItem)item.DropDownItems["schdualVisionTest"];
@@ -212,6 +221,7 @@ namespace DVLD.DriverLicenseApplications
 
 
         }
+
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
             //MySchualShows();
@@ -221,6 +231,8 @@ namespace DVLD.DriverLicenseApplications
         {
             if(_LDLApp.GetPassedTest() == 3)
             {
+                frmAddLicense frm = new frmAddLicense(_RowAppID);
+                frm.ShowDialog();
 
             }
         }

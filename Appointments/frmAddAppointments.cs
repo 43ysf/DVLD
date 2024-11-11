@@ -143,7 +143,7 @@ namespace DVLD.Appointments
         {
             if(TestAppointmentType == enTestAppointmentType.StreetTest && clsLocalDrivingLicenseApplication.GetPassedTest(_LDLApp.LocalDrivingLicenseApplicationID) == 2)
             {
-                _Application.ApplicationStatus = 3;
+                //_Application.ApplicationStatus = 3;
                 _Application.UpdateLastStatus();
             }
             _Save();
