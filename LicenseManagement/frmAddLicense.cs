@@ -47,6 +47,7 @@ namespace DVLD.LicenseManagement
                 {
                     driver = clsDriver.FindByPersonID(app.ApplicationPersonID);
                 }
+
                 clsLicense License = new clsLicense();
                 License.DriverID = driver.DriverID;
                 License.Notes = txtNotes.Text.Trim();

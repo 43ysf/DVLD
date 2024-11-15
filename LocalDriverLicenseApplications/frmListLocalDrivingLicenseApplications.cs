@@ -23,7 +23,10 @@ namespace DVLD.DriverLicenseApplications
     public partial class frmListLocalDrivingLicenseApplications : Form
     {
         private int _RowAppID = -1;
+
         private clsLocalDrivingLicenseApplication _LDLApp = null;
+
+        private clsApplication _App = null;
         public frmListLocalDrivingLicenseApplications()
         {
             InitializeComponent();
@@ -161,6 +164,7 @@ namespace DVLD.DriverLicenseApplications
                     //int IDValue = int.Parse(cell.Value.ToString());
                     _RowAppID = int.Parse(dgvListLicenseApplications.SelectedRows[0].Cells["L.D.LAppID"].Value.ToString());
                     _LDLApp = clsLocalDrivingLicenseApplication.Find(_RowAppID);
+                    _App = clsApplication.Find(_LDLApp.ApplicationID);
                     if(_LDLApp != null )
                         MySchualShows();
                    
@@ -174,12 +178,20 @@ namespace DVLD.DriverLicenseApplications
             ToolStripMenuItem item = (ToolStripMenuItem)contextMenuStrip1.Items["schdualTest"];
             ToolStripMenuItem item1 = (ToolStripMenuItem)contextMenuStrip1.Items["cancel"];
             ToolStripMenuItem item2 = (ToolStripMenuItem)contextMenuStrip1.Items["IssuDrivingLicense"];
-            if (numOfTrials == 3 || clsApplication.Find(_LDLApp.ApplicationID).ApplicationStatus == 2)
+            ToolStripMenuItem item3 = (ToolStripMenuItem)contextMenuStrip1.Items["ShowLicenseInfo"];
+            if (_App.ApplicationStatus != 3)
+            {
+                item3.Enabled = false;
+            }
+            else
+                item3.Enabled = true;
+
+            if (numOfTrials == 3 || _App.ApplicationStatus == 2)
             {
                 item.Enabled = false;
                 item1.Enabled = false;
                 //item2.Enabled = false;
-                
+                //item3.Enabled = true;
                 return;
             }
             else
@@ -187,6 +199,7 @@ namespace DVLD.DriverLicenseApplications
                 item.Enabled = true;
                 item1.Enabled =true;
                 item2.Enabled = true;
+                item3.Enabled = false;
 
 
             }
@@ -235,6 +248,12 @@ namespace DVLD.DriverLicenseApplications
                 frm.ShowDialog();
 
             }
+        }
+
+        private void ShowLicenseInfo_Click(object sender, EventArgs e)
+        {
+            frmLicenseInfo frm = new frmLicenseInfo(_App.ApplicationID);
+            frm.ShowDialog();
         }
     }
 }

@@ -29,20 +29,9 @@
         private void InitializeComponent()
         {
             this.grbDriverLicenseInfo = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblNotes = new System.Windows.Forms.Label();
-            this.lblIssueReason = new System.Windows.Forms.Label();
-            this.lblIssueDate = new System.Windows.Forms.Label();
-            this.lblGendor = new System.Windows.Forms.Label();
-            this.lblNationalNo = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblClass = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblLicenseID = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.lblIsDetained = new System.Windows.Forms.Label();
             this.lblExpirationDate = new System.Windows.Forms.Label();
             this.lblDriverID = new System.Windows.Forms.Label();
@@ -53,9 +42,20 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.lblLicenseID = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblNotes = new System.Windows.Forms.Label();
+            this.lblIssueReason = new System.Windows.Forms.Label();
+            this.lblIssueDate = new System.Windows.Forms.Label();
+            this.lblGendor = new System.Windows.Forms.Label();
+            this.lblNationalNo = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblClass = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.grbDriverLicenseInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -98,145 +98,34 @@
             this.grbDriverLicenseInfo.TabStop = false;
             this.grbDriverLicenseInfo.Text = "Driver License Info";
             // 
-            // label1
+            // pictureBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Class: ";
+            this.pictureBox1.Location = new System.Drawing.Point(661, 62);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(186, 174);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // lblLicenseID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Name: ";
+            this.lblLicenseID.AutoSize = true;
+            this.lblLicenseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLicenseID.Location = new System.Drawing.Point(187, 173);
+            this.lblLicenseID.Name = "lblLicenseID";
+            this.lblLicenseID.Size = new System.Drawing.Size(59, 20);
+            this.lblLicenseID.TabIndex = 30;
+            this.lblLicenseID.Text = "?????";
             // 
-            // label3
+            // label14
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 130);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "National No: ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 216);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Gendor:  ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 259);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Issue Date: ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(11, 302);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 20);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Issue Reason: ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(11, 345);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 20);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Notes: ";
-            // 
-            // lblNotes
-            // 
-            this.lblNotes.AutoSize = true;
-            this.lblNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotes.Location = new System.Drawing.Point(187, 345);
-            this.lblNotes.Name = "lblNotes";
-            this.lblNotes.Size = new System.Drawing.Size(59, 20);
-            this.lblNotes.TabIndex = 14;
-            this.lblNotes.Text = "?????";
-            // 
-            // lblIssueReason
-            // 
-            this.lblIssueReason.AutoSize = true;
-            this.lblIssueReason.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIssueReason.Location = new System.Drawing.Point(187, 302);
-            this.lblIssueReason.Name = "lblIssueReason";
-            this.lblIssueReason.Size = new System.Drawing.Size(59, 20);
-            this.lblIssueReason.TabIndex = 13;
-            this.lblIssueReason.Text = "?????";
-            // 
-            // lblIssueDate
-            // 
-            this.lblIssueDate.AutoSize = true;
-            this.lblIssueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIssueDate.Location = new System.Drawing.Point(187, 259);
-            this.lblIssueDate.Name = "lblIssueDate";
-            this.lblIssueDate.Size = new System.Drawing.Size(59, 20);
-            this.lblIssueDate.TabIndex = 12;
-            this.lblIssueDate.Text = "?????";
-            // 
-            // lblGendor
-            // 
-            this.lblGendor.AutoSize = true;
-            this.lblGendor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGendor.Location = new System.Drawing.Point(187, 216);
-            this.lblGendor.Name = "lblGendor";
-            this.lblGendor.Size = new System.Drawing.Size(59, 20);
-            this.lblGendor.TabIndex = 11;
-            this.lblGendor.Text = "?????";
-            // 
-            // lblNationalNo
-            // 
-            this.lblNationalNo.AutoSize = true;
-            this.lblNationalNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNationalNo.Location = new System.Drawing.Point(187, 130);
-            this.lblNationalNo.Name = "lblNationalNo";
-            this.lblNationalNo.Size = new System.Drawing.Size(59, 20);
-            this.lblNationalNo.TabIndex = 10;
-            this.lblNationalNo.Text = "?????";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(187, 87);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(59, 20);
-            this.lblName.TabIndex = 9;
-            this.lblName.Text = "?????";
-            // 
-            // lblClass
-            // 
-            this.lblClass.AutoSize = true;
-            this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClass.Location = new System.Drawing.Point(187, 44);
-            this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(59, 20);
-            this.lblClass.TabIndex = 8;
-            this.lblClass.Text = "?????";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(11, 173);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(106, 20);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "LicenseID: ";
             // 
             // lblIsDetained
             // 
@@ -338,33 +227,145 @@
             this.label19.TabIndex = 17;
             this.label19.Text = "Is Active: ";
             // 
-            // lblLicenseID
+            // lblNotes
             // 
-            this.lblLicenseID.AutoSize = true;
-            this.lblLicenseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLicenseID.Location = new System.Drawing.Point(187, 173);
-            this.lblLicenseID.Name = "lblLicenseID";
-            this.lblLicenseID.Size = new System.Drawing.Size(59, 20);
-            this.lblLicenseID.TabIndex = 30;
-            this.lblLicenseID.Text = "?????";
+            this.lblNotes.AutoSize = true;
+            this.lblNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotes.Location = new System.Drawing.Point(187, 345);
+            this.lblNotes.Name = "lblNotes";
+            this.lblNotes.Size = new System.Drawing.Size(59, 20);
+            this.lblNotes.TabIndex = 14;
+            this.lblNotes.Text = "?????";
             // 
-            // label14
+            // lblIssueReason
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(11, 173);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(106, 20);
-            this.label14.TabIndex = 29;
-            this.label14.Text = "LicenseID: ";
+            this.lblIssueReason.AutoSize = true;
+            this.lblIssueReason.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIssueReason.Location = new System.Drawing.Point(187, 302);
+            this.lblIssueReason.Name = "lblIssueReason";
+            this.lblIssueReason.Size = new System.Drawing.Size(59, 20);
+            this.lblIssueReason.TabIndex = 13;
+            this.lblIssueReason.Text = "?????";
             // 
-            // pictureBox1
+            // lblIssueDate
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(661, 62);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 174);
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
+            this.lblIssueDate.AutoSize = true;
+            this.lblIssueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIssueDate.Location = new System.Drawing.Point(187, 259);
+            this.lblIssueDate.Name = "lblIssueDate";
+            this.lblIssueDate.Size = new System.Drawing.Size(59, 20);
+            this.lblIssueDate.TabIndex = 12;
+            this.lblIssueDate.Text = "?????";
+            // 
+            // lblGendor
+            // 
+            this.lblGendor.AutoSize = true;
+            this.lblGendor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGendor.Location = new System.Drawing.Point(187, 216);
+            this.lblGendor.Name = "lblGendor";
+            this.lblGendor.Size = new System.Drawing.Size(59, 20);
+            this.lblGendor.TabIndex = 11;
+            this.lblGendor.Text = "?????";
+            // 
+            // lblNationalNo
+            // 
+            this.lblNationalNo.AutoSize = true;
+            this.lblNationalNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNationalNo.Location = new System.Drawing.Point(187, 130);
+            this.lblNationalNo.Name = "lblNationalNo";
+            this.lblNationalNo.Size = new System.Drawing.Size(59, 20);
+            this.lblNationalNo.TabIndex = 10;
+            this.lblNationalNo.Text = "?????";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(187, 87);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(59, 20);
+            this.lblName.TabIndex = 9;
+            this.lblName.Text = "?????";
+            // 
+            // lblClass
+            // 
+            this.lblClass.AutoSize = true;
+            this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass.Location = new System.Drawing.Point(187, 44);
+            this.lblClass.Name = "lblClass";
+            this.lblClass.Size = new System.Drawing.Size(59, 20);
+            this.lblClass.TabIndex = 8;
+            this.lblClass.Text = "?????";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(11, 345);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 20);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Notes: ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(11, 302);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 20);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Issue Reason: ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(11, 259);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(112, 20);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Issue Date: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(11, 216);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 20);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Gendor:  ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(11, 130);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "National No: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Name: ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Class: ";
             // 
             // ctrlDriverLicenseInfo
             // 

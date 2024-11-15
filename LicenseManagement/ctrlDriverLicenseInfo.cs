@@ -39,7 +39,18 @@ namespace DVLD.LicenseManagement
             lblName.Text = _Person.FullName;
             lblClass.Text = clsLicenseClass.Find(_License.LicenseClass).LicenseClassName;
             lblNotes.Text = _License.Notes;
-            
+            lblDateOfBirth.Text = _Person.DateOfBirth.ToShortDateString();
+            lblGendor.Text = _Person.Gendor ? "Female" : "Male";
+            lblDriverID.Text = _Driver.DriverID.ToString();
+            lblIsDetained.Text = "NO";
+            lblNationalNo.Text = _Person.NationalNo;
+            lblIssueReason.Text = _License.IssueReason == 1 ? "New" : "Update";
+            lblIsActive.Text = _License.IsActive ? "Yes" : "No";
+            lblExpirationDate.Text = _License.ExpirationDate.ToShortDateString();
+            lblIssueDate.Text = _License.IssueDate.ToShortDateString();
+            lblLicenseID.Text = _License.LicenseID.ToString();
+            pictureBox1.Image = (!string.IsNullOrEmpty(_Person.ImagePath)) ? Image.FromFile(_Person.ImagePath) : lblGendor.Text == "Male" ? Properties.Resources.Businessman : Properties.Resources.Businesswoman;
+               
             
         }
 

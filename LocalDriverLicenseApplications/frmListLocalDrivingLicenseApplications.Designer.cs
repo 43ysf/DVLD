@@ -49,6 +49,7 @@
             this.schdualWrittenTest = new System.Windows.Forms.ToolStripMenuItem();
             this.schdualStreetTest = new System.Windows.Forms.ToolStripMenuItem();
             this.IssuDrivingLicense = new System.Windows.Forms.ToolStripMenuItem();
+            this.ShowLicenseInfo = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListLicenseApplications)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -202,9 +203,10 @@
             this.deleteApplicationToolStripMenuItem,
             this.cancel,
             this.schdualTest,
-            this.IssuDrivingLicense});
+            this.IssuDrivingLicense,
+            this.ShowLicenseInfo});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(293, 176);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(293, 200);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // showApplicationDetailsToolStripMenuItem
@@ -271,6 +273,13 @@
             this.IssuDrivingLicense.Text = "Issue Driving License (First Time)";
             this.IssuDrivingLicense.Click += new System.EventHandler(this.issueDrivingLicenseFirstTimeToolStripMenuItem_Click);
             // 
+            // ShowLicenseInfo
+            // 
+            this.ShowLicenseInfo.Name = "ShowLicenseInfo";
+            this.ShowLicenseInfo.Size = new System.Drawing.Size(292, 24);
+            this.ShowLicenseInfo.Text = "Show License Info";
+            this.ShowLicenseInfo.Click += new System.EventHandler(this.ShowLicenseInfo_Click);
+            // 
             // frmListLocalDrivingLicenseApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -318,5 +327,6 @@
         private System.Windows.Forms.ToolStripMenuItem schdualWrittenTest;
         private System.Windows.Forms.ToolStripMenuItem schdualStreetTest;
         private System.Windows.Forms.ToolStripMenuItem IssuDrivingLicense;
+        private System.Windows.Forms.ToolStripMenuItem ShowLicenseInfo;
     }
 }
