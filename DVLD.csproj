@@ -87,11 +87,23 @@
     <Compile Include="frmTest.Designer.cs">
       <DependentUpon>frmTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="InternationalDrivingLicense\frmInternationalDrivingLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternationalDrivingLicense\frmInternationalDrivingLicense.Designer.cs">
+      <DependentUpon>frmInternationalDrivingLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="LicenseManagement\ctrlDriverLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="LicenseManagement\ctrlDriverLicenseInfo.Designer.cs">
       <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LicenseManagement\ctrlDrivingLicenseWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LicenseManagement\ctrlDrivingLicenseWithFilter.Designer.cs">
+      <DependentUpon>ctrlDrivingLicenseWithFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="LicenseManagement\frmAddLicense.cs">
       <SubType>Form</SubType>
@@ -274,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LicenseManagement\ctrlDriverLicenseInfo.resx">
       <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseManagement\ctrlDrivingLicenseWithFilter.resx">
+      <DependentUpon>ctrlDrivingLicenseWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LicenseManagement\frmAddLicense.resx">
       <DependentUpon>frmAddLicense.cs</DependentUpon>

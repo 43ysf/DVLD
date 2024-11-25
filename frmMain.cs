@@ -114,5 +114,10 @@ namespace DVLD
             frmAddNewLocalDrivingApplication frm = new frmAddNewLocalDrivingApplication();
             frm.ShowDialog();
         }
+
+        private void internationalDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

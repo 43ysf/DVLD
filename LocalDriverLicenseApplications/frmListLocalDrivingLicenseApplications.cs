@@ -182,14 +182,24 @@ namespace DVLD.DriverLicenseApplications
             if (_App.ApplicationStatus != 3)
             {
                 item3.Enabled = false;
+               
+
             }
             else
                 item3.Enabled = true;
+
+            //if(numOfTrials != 3)
+            //{
+            //    item2.Enabled = false;
+            //}
+    
+
 
             if (numOfTrials == 3 || _App.ApplicationStatus == 2)
             {
                 item.Enabled = false;
                 item1.Enabled = false;
+                item2.Enabled = true;
                 //item2.Enabled = false;
                 //item3.Enabled = true;
                 return;
@@ -200,7 +210,6 @@ namespace DVLD.DriverLicenseApplications
                 item1.Enabled =true;
                 item2.Enabled = true;
                 item3.Enabled = false;
-
 
             }
             ToolStripMenuItem subItem1 = (ToolStripMenuItem)item.DropDownItems["schdualVisionTest"];
@@ -213,17 +222,20 @@ namespace DVLD.DriverLicenseApplications
                     subItem1.Enabled = true;
                     subItem2.Enabled = false;
                     subItem3.Enabled = false;
+                    item2.Enabled = false;
                     break;
 
                 case 1:
                     subItem1.Enabled = false;
                     subItem2.Enabled = true;
                     subItem3.Enabled = false;
+                    item2.Enabled= false;
                     break;
                 case 2:
                     subItem2.Enabled = false;
                     subItem3.Enabled = true;
                     subItem1.Enabled = false;
+                    item3.Enabled = false;
                     break;
                 case 3:
                     item.Enabled = false;
@@ -254,6 +266,11 @@ namespace DVLD.DriverLicenseApplications
         {
             frmLicenseInfo frm = new frmLicenseInfo(_App.ApplicationID);
             frm.ShowDialog();
+        }
+
+        private void frmListLocalDrivingLicenseApplications_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

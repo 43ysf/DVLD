@@ -97,6 +97,7 @@
             this.grbDriverLicenseInfo.TabIndex = 0;
             this.grbDriverLicenseInfo.TabStop = false;
             this.grbDriverLicenseInfo.Text = "Driver License Info";
+            this.grbDriverLicenseInfo.Enter += new System.EventHandler(this.grbDriverLicenseInfo_Enter);
             // 
             // pictureBox1
             // 
