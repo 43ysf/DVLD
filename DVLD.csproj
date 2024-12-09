@@ -87,11 +87,23 @@
     <Compile Include="frmTest.Designer.cs">
       <DependentUpon>frmTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="InternationalDrivingLicense\ctrlInternationalAppInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InternationalDrivingLicense\ctrlInternationalAppInfo.Designer.cs">
+      <DependentUpon>ctrlInternationalAppInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="InternationalDrivingLicense\frmInternationalDrivingLicense.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InternationalDrivingLicense\frmInternationalDrivingLicense.Designer.cs">
       <DependentUpon>frmInternationalDrivingLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InternationalDrivingLicense\frmIntranatioalLicenseApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternationalDrivingLicense\frmIntranatioalLicenseApplications.Designer.cs">
+      <DependentUpon>frmIntranatioalLicenseApplications.cs</DependentUpon>
     </Compile>
     <Compile Include="LicenseManagement\ctrlDriverLicenseInfo.cs">
       <SubType>UserControl</SubType>
@@ -283,6 +295,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest.resx">
       <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InternationalDrivingLicense\ctrlInternationalAppInfo.resx">
+      <DependentUpon>ctrlInternationalAppInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InternationalDrivingLicense\frmInternationalDrivingLicense.resx">
+      <DependentUpon>frmInternationalDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InternationalDrivingLicense\frmIntranatioalLicenseApplications.resx">
+      <DependentUpon>frmIntranatioalLicenseApplications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LicenseManagement\ctrlDriverLicenseInfo.resx">
       <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
@@ -480,6 +501,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\driving-test 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\International 32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

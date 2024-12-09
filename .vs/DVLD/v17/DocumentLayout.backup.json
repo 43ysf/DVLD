@@ -1,0 +1,148 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Yousif\\source\\repos\\DVLD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5C3C2C66-8693-4606-B43D-FE2B54DAE10C}|DVLD.csproj|C:\\Users\\Yousif\\source\\repos\\DVLD\\internationaldrivinglicense\\frmintranatioallicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C3C2C66-8693-4606-B43D-FE2B54DAE10C}|DVLD.csproj|solutionrelative:internationaldrivinglicense\\frmintranatioallicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C72297-F64A-46EC-B311-1C46042BF964}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|c:\\users\\yousif\\source\\repos\\dvld_dataaccess\\clsinternationallicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C3C2C66-8693-4606-B43D-FE2B54DAE10C}|DVLD.csproj|C:\\Users\\Yousif\\source\\repos\\DVLD\\internationaldrivinglicense\\frmintranatioallicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5C3C2C66-8693-4606-B43D-FE2B54DAE10C}|DVLD.csproj|solutionrelative:internationaldrivinglicense\\frmintranatioallicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA9DF6E2-3C9E-4864-B494-87C5972409EA}|..\\DVLD_Business\\DVLD_Business.csproj|C:\\Users\\Yousif\\source\\repos\\dvld_business\\internationallicenses\\clsinternationallicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA9DF6E2-3C9E-4864-B494-87C5972409EA}|..\\DVLD_Business\\DVLD_Business.csproj|C:\\Users\\Yousif\\source\\repos\\dvld_business\\drivers\\clsdriver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C72297-F64A-46EC-B311-1C46042BF964}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|C:\\Users\\Yousif\\source\\repos\\dvld_dataaccess\\clsdrivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C3C2C66-8693-4606-B43D-FE2B54DAE10C}|DVLD.csproj|C:\\Users\\Yousif\\source\\repos\\DVLD\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C3C2C66-8693-4606-B43D-FE2B54DAE10C}|DVLD.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "clsInternationalLicenses.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsInternationalLicenses.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\clsInternationalLicenses.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsInternationalLicenses.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccess\\clsInternationalLicenses.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAA0wC4AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T13:51:13.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "clsDriver.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD_Business\\Drivers\\clsDriver.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_Business\\Drivers\\clsDriver.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD_Business\\Drivers\\clsDriver.cs",
+              "RelativeToolTip": "..\\DVLD_Business\\Drivers\\clsDriver.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T13:32:52.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "clsDrivers.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsDrivers.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\clsDrivers.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsDrivers.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccess\\clsDrivers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T13:32:32.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD\\frmMain.cs",
+              "RelativeDocumentMoniker": "frmMain.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD\\frmMain.cs",
+              "RelativeToolTip": "frmMain.cs",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAjwHkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-12-03T12:29:14.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmIntranatioalLicenseApplications.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD\\InternationalDrivingLicense\\frmIntranatioalLicenseApplications.cs",
+              "RelativeDocumentMoniker": "InternationalDrivingLicense\\frmIntranatioalLicenseApplications.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD\\InternationalDrivingLicense\\frmIntranatioalLicenseApplications.cs*",
+              "RelativeToolTip": "InternationalDrivingLicense\\frmIntranatioalLicenseApplications.cs*",
+              "ViewState": "AgIAABMAAAAAAAAAAAAjwCcAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T12:26:30.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "clsInternationalLicense.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD_Business\\InternationalLicenses\\clsInternationalLicense.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_Business\\InternationalLicenses\\clsInternationalLicense.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD_Business\\InternationalLicenses\\clsInternationalLicense.cs",
+              "RelativeToolTip": "..\\DVLD_Business\\InternationalLicenses\\clsInternationalLicense.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAqwEcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T12:25:49.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmIntranatioalLicenseApplications.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD\\InternationalDrivingLicense\\frmIntranatioalLicenseApplications.cs",
+              "RelativeDocumentMoniker": "InternationalDrivingLicense\\frmIntranatioalLicenseApplications.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD\\InternationalDrivingLicense\\frmIntranatioalLicenseApplications.cs [Design]*",
+              "RelativeToolTip": "InternationalDrivingLicense\\frmIntranatioalLicenseApplications.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T12:20:03.423Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,21 @@ namespace DVLD.InternationalDrivingLicense
         public frmInternationalDrivingLicense()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
+
+        private void btnIssue_Click(object sender, EventArgs e)
+        {
+            if(ctrlDrivingLicenseWithFilter1._License == null)
+            {
+                MessageBox.Show("You should Enter Active License");
+                return;
+            }
+            ctrlDrivingLicenseWithFilter1.Issue();
         }
     }
 }

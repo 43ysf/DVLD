@@ -12,7 +12,6 @@ C:\Users\Yousif\source\repos\DVLD\bin\Debug\DVLD_Business.dll
 C:\Users\Yousif\source\repos\DVLD\bin\Debug\DVLD_DataAccess.dll
 C:\Users\Yousif\source\repos\DVLD\bin\Debug\DVLD_Business.pdb
 C:\Users\Yousif\source\repos\DVLD\bin\Debug\DVLD_DataAccess.pdb
-C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.csproj.CopyComplete
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.frmMain.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.People.frmAddOrUpdate.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD_Presentation.People.ctrlAddNewPerson.resources
@@ -45,3 +44,8 @@ C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.Tests.frmTakeTest.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.LicenseManagement.frmAddLicense.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.LicenseManagement.ctrlDriverLicenseInfo.resources
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.LicenseManagement.frmLicenseInfo.resources
+C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.InternationalDrivingLicense.ctrlInternationalAppInfo.resources
+C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.LicenseManagement.ctrlDrivingLicenseWithFilter.resources
+C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.InternationalDrivingLicense.frmInternationalDrivingLicense.resources
+C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.InternationalDrivingLicense.frmIntranatioalLicenseApplications.resources
+C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.csproj.Up2Date
