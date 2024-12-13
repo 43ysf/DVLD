@@ -34,7 +34,7 @@ namespace DVLD.LicenseManagement
             }
 
             _License = clsLicense.Find(LicenseID);
-            ctrlDriverLicenseInfo1.LoadDataByLicenseID(_License);
+            ctrlDriverLicenseInfo1.LoadDataByLicenseID(LicenseID);
             LoadData();
             
         }

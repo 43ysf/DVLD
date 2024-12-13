@@ -35,10 +35,10 @@
             this.lbTitle = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.shwoDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.showLicenseDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showPersonLicenseHestoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,10 +68,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 245);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(971, 487);
@@ -97,7 +100,7 @@
             this.showLicenseDetailsToolStripMenuItem,
             this.showPersonLicenseHestoryToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(271, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(271, 104);
             // 
             // shwoDetailsToolStripMenuItem
             // 
@@ -105,6 +108,19 @@
             this.shwoDetailsToolStripMenuItem.Size = new System.Drawing.Size(270, 24);
             this.shwoDetailsToolStripMenuItem.Text = "Show Person Details";
             this.shwoDetailsToolStripMenuItem.Click += new System.EventHandler(this.shwoDetailsToolStripMenuItem_Click);
+            // 
+            // showLicenseDetailsToolStripMenuItem
+            // 
+            this.showLicenseDetailsToolStripMenuItem.Name = "showLicenseDetailsToolStripMenuItem";
+            this.showLicenseDetailsToolStripMenuItem.Size = new System.Drawing.Size(270, 24);
+            this.showLicenseDetailsToolStripMenuItem.Text = "show License details";
+            // 
+            // showPersonLicenseHestoryToolStripMenuItem
+            // 
+            this.showPersonLicenseHestoryToolStripMenuItem.Name = "showPersonLicenseHestoryToolStripMenuItem";
+            this.showPersonLicenseHestoryToolStripMenuItem.Size = new System.Drawing.Size(270, 24);
+            this.showPersonLicenseHestoryToolStripMenuItem.Text = "Show person License Hestory";
+            this.showPersonLicenseHestoryToolStripMenuItem.Click += new System.EventHandler(this.showPersonLicenseHestoryToolStripMenuItem_Click);
             // 
             // btnClose
             // 
@@ -129,18 +145,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
-            // 
-            // showLicenseDetailsToolStripMenuItem
-            // 
-            this.showLicenseDetailsToolStripMenuItem.Name = "showLicenseDetailsToolStripMenuItem";
-            this.showLicenseDetailsToolStripMenuItem.Size = new System.Drawing.Size(270, 24);
-            this.showLicenseDetailsToolStripMenuItem.Text = "show License details";
-            // 
-            // showPersonLicenseHestoryToolStripMenuItem
-            // 
-            this.showPersonLicenseHestoryToolStripMenuItem.Name = "showPersonLicenseHestoryToolStripMenuItem";
-            this.showPersonLicenseHestoryToolStripMenuItem.Size = new System.Drawing.Size(270, 24);
-            this.showPersonLicenseHestoryToolStripMenuItem.Text = "Show person License Hestory";
             // 
             // frmIntranatioalLicenseApplications
             // 

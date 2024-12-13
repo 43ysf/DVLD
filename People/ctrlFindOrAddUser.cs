@@ -15,6 +15,8 @@ namespace DVLD.People
 {
     public partial class ctrlFindOrAddUser : UserControl
     {
+        private int _PersonID = -1;
+        clsPerson Person = null;
         public ctrlFindOrAddUser()
         {
             InitializeComponent();
@@ -23,27 +25,13 @@ namespace DVLD.People
             //txtSearch.KeyDown += new KeyEventHandler(txtSearch_KeyDown);
         }
 
-
-
         public delegate void DataBackEventHandler(object sender, int PersonID);
 
         public event DataBackEventHandler DataBack;
-
-
         private void GetDataBack(object sender, int PersonID)
         {
             _PersonID = PersonID;
         }
-
-
-
-
-        private int _PersonID = -1;
-
-
-        clsPerson Person = null;
-        
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string SelectedItem = cbFilterBy.SelectedItem.ToString();
@@ -56,22 +44,18 @@ namespace DVLD.People
                 txtSearch.KeyPress += new KeyPressEventHandler(txtFilter_KeyPress);
             }
         }
-        
-
         private void _MssageBox(string Message, string Title)
         {
              MessageBox.Show(Message, Title, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
-
         private void btnFind_Click(object sender, EventArgs e)
         {
             string SelectedItem = cbFilterBy.SelectedItem.ToString();
-            if(SelectedItem == "National No")
+            if (SelectedItem == "National No")
             {
                 if (clsPerson.IsExist(txtSearch.Text))
                 {
-                    Person = clsPerson.Find(txtSearch.Text);    
+                    Person = clsPerson.Find(txtSearch.Text);
                 }
                 else
                 {
@@ -79,8 +63,8 @@ namespace DVLD.People
                     return;
 
                 }
-                
-                    
+
+
             }
             else
             {
@@ -100,8 +84,16 @@ namespace DVLD.People
             DataBack?.Invoke(this, Person.PersonID);
             _PersonID = Person.PersonID;
             ctrlPersonInfo1.FillPersonInfo(Person);
+            //Find();
         }
 
+        private void Find()
+        {
+            txtSearch.Text = _PersonID.ToString();
+            //cbFilterBy.SelectedValue = "PersonID";
+            Person = clsPerson.Find(_PersonID);
+            ctrlPersonInfo1.FillPersonInfo(Person);
+        }
         private void txtFilter_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -161,6 +153,17 @@ namespace DVLD.People
         private void gbFindOrAdd_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        public void grbFindOrAddGrbEnable( int PersonID, bool Enable = false )
+        {
+            gbFindOrAdd.Enabled = Enable;   
+            _PersonID = PersonID;
+            MessageBox.Show(_PersonID.ToString());
+            Find();
+           
+
+            //btnFind_Click();
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using DVLD.DriverLicenseApplications;
+using DVLD.InternationalDrivingLicense;
+using DVLD.LicenseManagement;
 using DVLD.LocalDriverLicenseApplications;
 using DVLD.Manage_Test_type;
 using DVLD.People;
@@ -23,7 +25,7 @@ namespace DVLD
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             // Application.Run(new frmAddNewLocalDrivingApplication());
-            Application.Run(new frmLoginScreen());
+            Application.Run(new frmIntranatioalLicenseApplications());
             //Application.Run(new frmTest());
         }
     }

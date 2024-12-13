@@ -1,4 +1,5 @@
-﻿using DVLD.People;
+﻿using DVLD.LicenseManagement;
+using DVLD.People;
 using DVLD_Business.Applications;
 using DVLD_Business.InternationalLicenses;
 using DVLD_Business.LocalDrivingLicenseApplications;
@@ -37,8 +38,8 @@ namespace DVLD.InternationalDrivingLicense
 
         private void shwoDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //frmPersonInfo frm = new frmPersonInfo();
-            //frm.ShowDialog();   
+            frmPersonInfo frm = new frmPersonInfo(_Licnese.Driver.PersonID);
+            frm.ShowDialog();
         }
 
         private void dataGridView1_MouseDown(object sender, MouseEventArgs e)
@@ -54,11 +55,17 @@ namespace DVLD.InternationalDrivingLicense
                     //var cell = dgvListLicenseApplications.SelectedRows[0].Cells["UserID"];
                     //int IDValue = int.Parse(cell.Value.ToString());
                     _LicneseID = int.Parse(dataGridView1.SelectedRows[0].Cells["InterNationalLicenseID"].Value.ToString());
-                    //_Licnese = clsInternationalLicense.Find(_LicneseID);
+                    _Licnese = clsInternationalLicense.Find(_LicneseID);
 
                 }
             }
 
+        }
+
+        private void showPersonLicenseHestoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLicenseHistory frm = new frmLicenseHistory(_Licnese.DriverID);
+            frm.ShowDialog();
         }
     }
 }

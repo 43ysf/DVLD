@@ -36,9 +36,6 @@
     <Reference Include="DVLD_Business">
       <HintPath>..\DVLD_Business\bin\Debug\DVLD_Business.dll</HintPath>
     </Reference>
-    <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\..\..\Guna\Guna.UI2.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -123,11 +120,23 @@
     <Compile Include="LicenseManagement\frmAddLicense.Designer.cs">
       <DependentUpon>frmAddLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="LicenseManagement\frmLicenseHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LicenseManagement\frmLicenseHistory.Designer.cs">
+      <DependentUpon>frmLicenseHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="LicenseManagement\frmLicenseInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LicenseManagement\frmLicenseInfo.Designer.cs">
       <DependentUpon>frmLicenseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LicenseManagement\frmRenewLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LicenseManagement\frmRenewLicense.Designer.cs">
+      <DependentUpon>frmRenewLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="LocalDriverLicenseApplications\ctrlDrivinLicenseApplicationInfo.cs">
       <SubType>UserControl</SubType>
@@ -314,8 +323,14 @@
     <EmbeddedResource Include="LicenseManagement\frmAddLicense.resx">
       <DependentUpon>frmAddLicense.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LicenseManagement\frmLicenseHistory.resx">
+      <DependentUpon>frmLicenseHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LicenseManagement\frmLicenseInfo.resx">
       <DependentUpon>frmLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseManagement\frmRenewLicense.resx">
+      <DependentUpon>frmRenewLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocalDriverLicenseApplications\ctrlDrivinLicenseApplicationInfo.resx">
       <DependentUpon>ctrlDrivinLicenseApplicationInfo.cs</DependentUpon>
@@ -362,6 +377,7 @@
     <EmbeddedResource Include="People\frmPersonInfo.resx">
       <DependentUpon>frmPersonInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

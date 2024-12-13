@@ -55,8 +55,9 @@ namespace DVLD.LicenseManagement
             
         }
 
-        public void LoadDataByLicenseID(clsLicense license)
+        public void LoadDataByLicenseID(int LicenseID)
         {
+            clsLicense license = clsLicense.Find(LicenseID);
             _License = license;
             _Application = clsApplication.Find(_License.ApplicationID);
             _Person = clsPerson.Find(_Application.ApplicationPersonID);
@@ -76,9 +77,6 @@ namespace DVLD.LicenseManagement
             lblIssueDate.Text = _License.IssueDate.ToShortDateString();
             lblLicenseID.Text = _License.LicenseID.ToString();
             pictureBox1.Image = (!string.IsNullOrEmpty(_Person.ImagePath)) ? Image.FromFile(_Person.ImagePath) : lblGendor.Text == "Male" ? Properties.Resources.Businessman : Properties.Resources.Businesswoman;
-
-
-
 
         }
 
