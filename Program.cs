@@ -25,7 +25,7 @@ namespace DVLD
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             // Application.Run(new frmAddNewLocalDrivingApplication());
-            Application.Run(new frmRenewLicense());
+            Application.Run(new frmLoginScreen());
             //Application.Run(new frmTest());
         }
     }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lbTitle = new System.Windows.Forms.Label();
-            this.ctrlFindDriverLicense1 = new DVLD.LicenseManagement.ctrlFindDriverLicense();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lblTotalFees = new System.Windows.Forms.Label();
@@ -40,8 +39,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.lblILicenseID = new System.Windows.Forms.Label();
-            this.lblLocackLicenseID = new System.Windows.Forms.Label();
+            this.lblRenwedLicense = new System.Windows.Forms.Label();
+            this.lblOldLicense = new System.Windows.Forms.Label();
             this.lblExpartaionDate = new System.Windows.Forms.Label();
             this.lblCreatedBy = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@
             this.btnIssue = new System.Windows.Forms.Button();
             this.llblShowLicenseHestory = new System.Windows.Forms.LinkLabel();
             this.llblShowNewLicenseInfo = new System.Windows.Forms.LinkLabel();
+            this.ctrlFindDriverLicense1 = new DVLD.LicenseManagement.ctrlFindDriverLicense();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,14 +72,6 @@
             this.lbTitle.TabIndex = 14;
             this.lbTitle.Text = "Renew Driving License Application\r\n";
             // 
-            // ctrlFindDriverLicense1
-            // 
-            this.ctrlFindDriverLicense1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.ctrlFindDriverLicense1.Location = new System.Drawing.Point(12, 54);
-            this.ctrlFindDriverLicense1.Name = "ctrlFindDriverLicense1";
-            this.ctrlFindDriverLicense1.Size = new System.Drawing.Size(866, 438);
-            this.ctrlFindDriverLicense1.TabIndex = 15;
-            // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -92,8 +84,8 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.lblILicenseID);
-            this.groupBox1.Controls.Add(this.lblLocackLicenseID);
+            this.groupBox1.Controls.Add(this.lblRenwedLicense);
+            this.groupBox1.Controls.Add(this.lblOldLicense);
             this.groupBox1.Controls.Add(this.lblExpartaionDate);
             this.groupBox1.Controls.Add(this.lblCreatedBy);
             this.groupBox1.Controls.Add(this.label16);
@@ -116,7 +108,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(493, 166);
+            this.label5.Location = new System.Drawing.Point(493, 164);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(110, 20);
             this.label5.TabIndex = 25;
@@ -126,7 +118,7 @@
             // 
             this.lblTotalFees.AutoSize = true;
             this.lblTotalFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalFees.Location = new System.Drawing.Point(609, 165);
+            this.lblTotalFees.Location = new System.Drawing.Point(639, 164);
             this.lblTotalFees.Name = "lblTotalFees";
             this.lblTotalFees.Size = new System.Drawing.Size(49, 20);
             this.lblTotalFees.TabIndex = 24;
@@ -175,7 +167,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(462, 59);
+            this.label9.Location = new System.Drawing.Point(462, 56);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(141, 20);
             this.label9.TabIndex = 19;
@@ -185,7 +177,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(453, 103);
+            this.label10.Location = new System.Drawing.Point(453, 92);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(150, 20);
             this.label10.TabIndex = 18;
@@ -195,37 +187,37 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(488, 136);
+            this.label11.Location = new System.Drawing.Point(488, 128);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(115, 20);
             this.label11.TabIndex = 17;
             this.label11.Text = "Created By: ";
             // 
-            // lblILicenseID
+            // lblRenwedLicense
             // 
-            this.lblILicenseID.AutoSize = true;
-            this.lblILicenseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblILicenseID.Location = new System.Drawing.Point(609, 21);
-            this.lblILicenseID.Name = "lblILicenseID";
-            this.lblILicenseID.Size = new System.Drawing.Size(49, 20);
-            this.lblILicenseID.TabIndex = 16;
-            this.lblILicenseID.Text = "????";
+            this.lblRenwedLicense.AutoSize = true;
+            this.lblRenwedLicense.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRenwedLicense.Location = new System.Drawing.Point(639, 20);
+            this.lblRenwedLicense.Name = "lblRenwedLicense";
+            this.lblRenwedLicense.Size = new System.Drawing.Size(49, 20);
+            this.lblRenwedLicense.TabIndex = 16;
+            this.lblRenwedLicense.Text = "????";
             // 
-            // lblLocackLicenseID
+            // lblOldLicense
             // 
-            this.lblLocackLicenseID.AutoSize = true;
-            this.lblLocackLicenseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocackLicenseID.Location = new System.Drawing.Point(609, 59);
-            this.lblLocackLicenseID.Name = "lblLocackLicenseID";
-            this.lblLocackLicenseID.Size = new System.Drawing.Size(49, 20);
-            this.lblLocackLicenseID.TabIndex = 15;
-            this.lblLocackLicenseID.Text = "????";
+            this.lblOldLicense.AutoSize = true;
+            this.lblOldLicense.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOldLicense.Location = new System.Drawing.Point(639, 56);
+            this.lblOldLicense.Name = "lblOldLicense";
+            this.lblOldLicense.Size = new System.Drawing.Size(49, 20);
+            this.lblOldLicense.TabIndex = 15;
+            this.lblOldLicense.Text = "????";
             // 
             // lblExpartaionDate
             // 
             this.lblExpartaionDate.AutoSize = true;
             this.lblExpartaionDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpartaionDate.Location = new System.Drawing.Point(609, 103);
+            this.lblExpartaionDate.Location = new System.Drawing.Point(639, 92);
             this.lblExpartaionDate.Name = "lblExpartaionDate";
             this.lblExpartaionDate.Size = new System.Drawing.Size(49, 20);
             this.lblExpartaionDate.TabIndex = 14;
@@ -235,7 +227,7 @@
             // 
             this.lblCreatedBy.AutoSize = true;
             this.lblCreatedBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreatedBy.Location = new System.Drawing.Point(609, 129);
+            this.lblCreatedBy.Location = new System.Drawing.Point(639, 128);
             this.lblCreatedBy.Name = "lblCreatedBy";
             this.lblCreatedBy.Size = new System.Drawing.Size(49, 20);
             this.lblCreatedBy.TabIndex = 13;
@@ -343,6 +335,7 @@
             this.btnClose.TabIndex = 23;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnIssue
             // 
@@ -376,6 +369,14 @@
             this.llblShowNewLicenseInfo.TabStop = true;
             this.llblShowNewLicenseInfo.Text = "Show New license info";
             // 
+            // ctrlFindDriverLicense1
+            // 
+            this.ctrlFindDriverLicense1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.ctrlFindDriverLicense1.Location = new System.Drawing.Point(12, 54);
+            this.ctrlFindDriverLicense1.Name = "ctrlFindDriverLicense1";
+            this.ctrlFindDriverLicense1.Size = new System.Drawing.Size(866, 438);
+            this.ctrlFindDriverLicense1.TabIndex = 15;
+            // 
             // frmRenewLicense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -405,8 +406,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label lblILicenseID;
-        private System.Windows.Forms.Label lblLocackLicenseID;
+        private System.Windows.Forms.Label lblRenwedLicense;
+        private System.Windows.Forms.Label lblOldLicense;
         private System.Windows.Forms.Label lblExpartaionDate;
         private System.Windows.Forms.Label lblCreatedBy;
         private System.Windows.Forms.Label label16;
