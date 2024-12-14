@@ -27,7 +27,7 @@ namespace DVLD.LicenseManagement
         {
          
             int LicenseID = Convert.ToInt32(txtSearch.Text.Trim());    
-            if(!clsLicense.ILicenseExist(LicenseID))
+            if(!clsLicense.IsLicenseExist(LicenseID))
             {
                 MessageBox.Show("License is not present in the system.");
                 return;

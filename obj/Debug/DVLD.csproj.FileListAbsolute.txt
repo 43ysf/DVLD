@@ -51,3 +51,4 @@ C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.csproj.Up2Date
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.exe
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.pdb
 C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.LicenseManagement.frmRenewLicense.resources
+C:\Users\Yousif\source\repos\DVLD\obj\Debug\DVLD.LicenseManagement.ctrlFindDriverLicense.resources

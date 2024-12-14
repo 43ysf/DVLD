@@ -114,6 +114,12 @@
     <Compile Include="LicenseManagement\ctrlDrivingLicenseWithFilter.Designer.cs">
       <DependentUpon>ctrlDrivingLicenseWithFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="LicenseManagement\ctrlFindDriverLicense.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LicenseManagement\ctrlFindDriverLicense.Designer.cs">
+      <DependentUpon>ctrlFindDriverLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="LicenseManagement\frmAddLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -319,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LicenseManagement\ctrlDrivingLicenseWithFilter.resx">
       <DependentUpon>ctrlDrivingLicenseWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseManagement\ctrlFindDriverLicense.resx">
+      <DependentUpon>ctrlFindDriverLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LicenseManagement\frmAddLicense.resx">
       <DependentUpon>frmAddLicense.cs</DependentUpon>

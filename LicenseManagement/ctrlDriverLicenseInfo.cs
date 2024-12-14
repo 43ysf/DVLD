@@ -59,6 +59,11 @@ namespace DVLD.LicenseManagement
         {
             clsLicense license = clsLicense.Find(LicenseID);
             _License = license;
+            if(_License == null)
+            {
+                MessageBox.Show("License Not Found please enter another LicenseID");
+                return;
+            }
             _Application = clsApplication.Find(_License.ApplicationID);
             _Person = clsPerson.Find(_Application.ApplicationPersonID);
             _Driver = clsDriver.Find(_License.DriverID);
