@@ -50,6 +50,7 @@
             this.schdualStreetTest = new System.Windows.Forms.ToolStripMenuItem();
             this.IssuDrivingLicense = new System.Windows.Forms.ToolStripMenuItem();
             this.ShowLicenseInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.showLicenseHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListLicenseApplications)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -204,9 +205,10 @@
             this.cancel,
             this.schdualTest,
             this.IssuDrivingLicense,
-            this.ShowLicenseInfo});
+            this.ShowLicenseInfo,
+            this.showLicenseHistoryToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(293, 172);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(293, 224);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // showApplicationDetailsToolStripMenuItem
@@ -280,6 +282,13 @@
             this.ShowLicenseInfo.Text = "Show License Info";
             this.ShowLicenseInfo.Click += new System.EventHandler(this.ShowLicenseInfo_Click);
             // 
+            // showLicenseHistoryToolStripMenuItem
+            // 
+            this.showLicenseHistoryToolStripMenuItem.Name = "showLicenseHistoryToolStripMenuItem";
+            this.showLicenseHistoryToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
+            this.showLicenseHistoryToolStripMenuItem.Text = "Show License History";
+            this.showLicenseHistoryToolStripMenuItem.Click += new System.EventHandler(this.showLicenseHistoryToolStripMenuItem_Click);
+            // 
             // frmListLocalDrivingLicenseApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -329,5 +338,6 @@
         private System.Windows.Forms.ToolStripMenuItem schdualStreetTest;
         private System.Windows.Forms.ToolStripMenuItem IssuDrivingLicense;
         private System.Windows.Forms.ToolStripMenuItem ShowLicenseInfo;
+        private System.Windows.Forms.ToolStripMenuItem showLicenseHistoryToolStripMenuItem;
     }
 }

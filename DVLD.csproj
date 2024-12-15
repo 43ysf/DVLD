@@ -144,6 +144,12 @@
     <Compile Include="LicenseManagement\frmRenewLicense.Designer.cs">
       <DependentUpon>frmRenewLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="LicenseManagement\frmReplacementOrDamagedLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LicenseManagement\frmReplacementOrDamagedLicense.Designer.cs">
+      <DependentUpon>frmReplacementOrDamagedLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="LocalDriverLicenseApplications\ctrlDrivinLicenseApplicationInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -340,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LicenseManagement\frmRenewLicense.resx">
       <DependentUpon>frmRenewLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseManagement\frmReplacementOrDamagedLicense.resx">
+      <DependentUpon>frmReplacementOrDamagedLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocalDriverLicenseApplications\ctrlDrivinLicenseApplicationInfo.resx">
       <DependentUpon>ctrlDrivinLicenseApplicationInfo.cs</DependentUpon>

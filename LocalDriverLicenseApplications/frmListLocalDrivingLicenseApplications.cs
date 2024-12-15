@@ -272,5 +272,13 @@ namespace DVLD.DriverLicenseApplications
         {
 
         }
+
+        private void showLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsDriver driver = clsDriver.FindByPersonID(_App.ApplicationPersonID);
+            frmLicenseHistory frm = new frmLicenseHistory(driver.DriverID);
+            frm.ShowDialog();
+            
+        }
     }
 }
