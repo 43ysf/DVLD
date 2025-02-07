@@ -38,6 +38,8 @@
             this.sendMessageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbSearchBy = new System.Windows.Forms.ComboBox();
+            this.txtFillter = new System.Windows.Forms.TextBox();
             this.btnAddNew = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
@@ -92,7 +94,7 @@
             // editPersonToolStripMenuItem
             // 
             this.editPersonToolStripMenuItem.Name = "editPersonToolStripMenuItem";
-            this.editPersonToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.editPersonToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
             this.editPersonToolStripMenuItem.Text = "Edit Person";
             this.editPersonToolStripMenuItem.Click += new System.EventHandler(this.editPersonToolStripMenuItem_Click);
             // 
@@ -123,6 +125,8 @@
             // panel1
             // 
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.cbSearchBy);
+            this.panel1.Controls.Add(this.txtFillter);
             this.panel1.Controls.Add(this.btnAddNew);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
@@ -131,6 +135,37 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1532, 220);
             this.panel1.TabIndex = 5;
+            // 
+            // cbSearchBy
+            // 
+            this.cbSearchBy.FormattingEnabled = true;
+            this.cbSearchBy.Items.AddRange(new object[] {
+            "None",
+            "National No.",
+            "Person ID",
+            "First Name",
+            "Second Name",
+            "Third Name",
+            "Last Name",
+            "Nationality",
+            "Gendor",
+            "Phone",
+            "Email"});
+            this.cbSearchBy.Location = new System.Drawing.Point(12, 193);
+            this.cbSearchBy.Name = "cbSearchBy";
+            this.cbSearchBy.Size = new System.Drawing.Size(194, 24);
+            this.cbSearchBy.TabIndex = 5;
+            this.cbSearchBy.SelectedIndexChanged += new System.EventHandler(this.cbSearchBy_SelectedIndexChanged);
+            // 
+            // txtFillter
+            // 
+            this.txtFillter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFillter.Location = new System.Drawing.Point(212, 193);
+            this.txtFillter.Name = "txtFillter";
+            this.txtFillter.Size = new System.Drawing.Size(272, 22);
+            this.txtFillter.TabIndex = 4;
+            this.txtFillter.TextChanged += new System.EventHandler(this.txtFillter_TextChanged);
+            this.txtFillter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFillter_KeyPress);
             // 
             // btnAddNew
             // 
@@ -205,5 +240,7 @@
         private System.Windows.Forms.ToolStripMenuItem phoneCallToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sendMessageToolStripMenuItem;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.TextBox txtFillter;
+        private System.Windows.Forms.ComboBox cbSearchBy;
     }
 }

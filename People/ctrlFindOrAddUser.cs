@@ -17,6 +17,16 @@ namespace DVLD.People
     {
         private int _PersonID = -1;
         clsPerson Person = null;
+
+        public Action<int> OnPersonSelected;
+        protected virtual void PersonSelected(int PersonID)
+        {
+            Action<int> handler  = OnPersonSelected;
+            if (handler != null )
+            {
+                handler(PersonID);
+            }
+        }
         public ctrlFindOrAddUser()
         {
             InitializeComponent();
@@ -55,7 +65,11 @@ namespace DVLD.People
             {
                 if (clsPerson.IsExist(txtSearch.Text))
                 {
+                    int PersonID = Convert.ToInt32(txtSearch.Text);
                     Person = clsPerson.Find(txtSearch.Text);
+
+                    if (OnPersonSelected != null)
+                        PersonSelected(PersonID);
                 }
                 else
                 {
@@ -113,11 +127,14 @@ namespace DVLD.People
             frm.ShowDialog();
             _PersonID = frm._PersonID;
             Person =  clsPerson.Find(_PersonID);
+            if (OnPersonSelected != null && Person != null)
+                PersonSelected(_PersonID);
+                
+
             if(Person != null)
             {
                 ctrlPersonInfo1.FillPersonInfo(Person);
                 DataBack?.Invoke(this, Person.PersonID);
-
             }
 
         }

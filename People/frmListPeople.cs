@@ -14,6 +14,30 @@ namespace DVLD.People
 {
     public partial class frmListPeople : Form
     {
+        private static DataTable _dtAllPeople = clsPerson.GetAllPeople();
+        private DataTable _dtPeople = _dtAllPeople.DefaultView.ToTable(false, "PersonID", "NationalNo",
+                                                         "FirstName", "SecondName", "ThirdName", "LastName",
+                                                         "GendorCaption", "DateOfBirth", "CountryName",
+                                                         "Phone", "Email");
+
+
+        ////only select the columns that you want to show in the grid
+        //private DataTable _dtPeople = _dtAllPeople.DefaultView.ToTable(false, "PersonID", "NationalNo",
+        //                                                 "FirstName", "SecondName", "ThirdName", "LastName",
+        //                                                 "GendorCaption", "DateOfBirth", "CountryName",
+        //                                                 "Phone", "Email");
+
+        private void _RefreshPeoplList()
+        {
+            _dtAllPeople = clsPerson.GetAllPeople();
+            _dtPeople = _dtAllPeople.DefaultView.ToTable(false, "PersonID", "NationalNo",
+                                                       "FirstName", "SecondName", "ThirdName", "LastName",
+                                                       "GendorCaption", "DateOfBirth", "CountryName",
+                                                       "Phone", "Email");
+
+            dgvListPeople.DataSource = _dtPeople;
+        }
+
         public frmListPeople()
         {
             InitializeComponent();
@@ -24,33 +48,17 @@ namespace DVLD.People
             //dgvListPeople.DataSource = clsPerson.GetAllPeople();
             //dgvListPeople.Columns["ImagePath"].Visible = false;
 
+            cbSearchBy.SelectedIndex = 0;
+            txtFillter.Visible = false;
+            dgvListPeople.DataSource = _dtPeople;
+
         }
 
         int SelectedID = -1;
 
         private void LoadDataToGirdView()
         {
-            dgvListPeople.Columns.Clear();
-            DataTable dt = clsPerson.GetAllPeople();
-            dgvListPeople.Columns.Add("PersonID", "PersonID");
-            dgvListPeople.Columns.Add("First Name", "FirstName");
-            dgvListPeople.Columns.Add("SecondName", "SecondName");
-            dgvListPeople.Columns.Add("ThirdName", "ThirdName");
-            dgvListPeople.Columns.Add("LastName", "LastName");
-            dgvListPeople.Columns.Add("DateOfBirth", "DateOfBirth");
-            dgvListPeople.Columns.Add("Gendor", "Gendor");
-            dgvListPeople.Columns.Add("Address", "Address");
-            dgvListPeople.Columns.Add("Phone", "Phone");
-            dgvListPeople.Columns.Add("Email", "Email");
-            foreach (DataRow row in dt.Rows)
-            {
-                string Gendor = "Female";
-                Gendor = Convert.ToBoolean(row["Gendor"]) ? "Female" : "Male";
-                DateTime dob = (DateTime)row["DateOfBirth"];
-                dob = dob.Date;
-                dgvListPeople.Rows.Add(row["PersonID"], row["FirstName"], row["SecondName"], row["ThirdName"], row["LastName"], dob, Gendor, row["Address"], row["Phone"], row["Email"]);
-
-            }
+            
         }
 
         private void btnAddNew_Click(object sender, EventArgs e)
@@ -128,6 +136,105 @@ namespace DVLD.People
         private void frmListPeople_MaximumSizeChanged(object sender, EventArgs e)
         {
             dgvListPeople.Width = this.Width;
+
+        }
+
+
+        private void cbSearchBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtFillter.Clear();
+            if(txtFillter.Text == "None")
+            {
+                txtFillter.Visible = false;
+            }
+            else
+            {
+                txtFillter.Visible = true;
+                if(txtFillter.Text == "PersonID")
+                {
+                    
+                }
+            }
+        }
+
+        private void txtFillter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(cbSearchBy.Text == "PersonID")
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtFillter_TextChanged(object sender, EventArgs e)
+        {
+
+            string FilterColumn = "";
+            //Map Selected Filter to real Column name 
+            switch (cbSearchBy.Text)
+            {
+                case "Person ID":
+                    FilterColumn = "PersonID";
+                    break;
+
+                case "National No.":
+                    FilterColumn = "NationalNo";
+                    break;
+
+                case "First Name":
+                    FilterColumn = "FirstName";
+                    break;
+
+                case "Second Name":
+                    FilterColumn = "SecondName";
+                    break;
+
+                case "Third Name":
+                    FilterColumn = "ThirdName";
+                    break;
+
+                case "Last Name":
+                    FilterColumn = "LastName";
+                    break;
+
+                case "Nationality":
+                    FilterColumn = "CountryName";
+                    break;
+
+                case "Gendor":
+                    FilterColumn = "GendorCaption";
+                    break;
+
+                case "Phone":
+                    FilterColumn = "Phone";
+                    break;
+
+                case "Email":
+                    FilterColumn = "Email";
+                    break;
+
+                default:
+                    FilterColumn = "None";
+                    break;
+
+            }
+
+            //Reset the filters in case nothing selected or filter value conains nothing.
+            if (txtFillter.Text.Trim() == "" || FilterColumn == "None")
+            {
+                _dtPeople.DefaultView.RowFilter = "";
+                //lblRecordsCount.Text = dgvPeople.Rows.Count.ToString();
+                return;
+            }
+
+
+            if (FilterColumn == "PersonID")
+                //in this case we deal with integer not string.
+
+                _dtPeople.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, txtFillter.Text.Trim());
+            else
+
+                _dtPeople.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFillter.Text.Trim());
+
+            //lblRecordsCount.Text = dgvPeople.Rows.Count.ToString();
+
 
         }
     }

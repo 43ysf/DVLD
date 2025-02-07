@@ -117,9 +117,9 @@
             // 
             // ctrlPersonInfo1
             // 
-            this.ctrlPersonInfo1.Location = new System.Drawing.Point(3, 165);
+            this.ctrlPersonInfo1.Location = new System.Drawing.Point(14, 165);
             this.ctrlPersonInfo1.Name = "ctrlPersonInfo1";
-            this.ctrlPersonInfo1.Size = new System.Drawing.Size(989, 390);
+            this.ctrlPersonInfo1.Size = new System.Drawing.Size(978, 390);
             this.ctrlPersonInfo1.TabIndex = 1;
             this.ctrlPersonInfo1.Load += new System.EventHandler(this.ctrlPersonInfo1_Load);
             // 

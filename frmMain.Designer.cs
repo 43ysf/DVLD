@@ -35,6 +35,7 @@
             this.lockalLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.internationalLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.renewDriveingLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.replacementForDamagedOrLostLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageApplicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loacalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.internationalDrivingLicesnseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +50,6 @@
             this.changePassworedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.replacementForDamagedOrLostLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +67,7 @@
             this.accountSettingsToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1312, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(1312, 30);
             this.menuStrip2.TabIndex = 2;
             this.menuStrip2.Text = "menuStrip2";
             this.menuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip2_ItemClicked);
@@ -103,7 +103,7 @@
             this.lockalLicenseToolStripMenuItem,
             this.internationalLicenseToolStripMenuItem});
             this.newDrivingLiToolStripMenuItem.Name = "newDrivingLiToolStripMenuItem";
-            this.newDrivingLiToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
+            this.newDrivingLiToolStripMenuItem.Size = new System.Drawing.Size(468, 26);
             this.newDrivingLiToolStripMenuItem.Text = "New Driving License";
             // 
             // lockalLicenseToolStripMenuItem
@@ -123,9 +123,16 @@
             // renewDriveingLicenseToolStripMenuItem
             // 
             this.renewDriveingLicenseToolStripMenuItem.Name = "renewDriveingLicenseToolStripMenuItem";
-            this.renewDriveingLicenseToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
+            this.renewDriveingLicenseToolStripMenuItem.Size = new System.Drawing.Size(468, 26);
             this.renewDriveingLicenseToolStripMenuItem.Text = "Renew Driveing License";
             this.renewDriveingLicenseToolStripMenuItem.Click += new System.EventHandler(this.renewDriveingLicenseToolStripMenuItem_Click);
+            // 
+            // replacementForDamagedOrLostLicenseToolStripMenuItem
+            // 
+            this.replacementForDamagedOrLostLicenseToolStripMenuItem.Name = "replacementForDamagedOrLostLicenseToolStripMenuItem";
+            this.replacementForDamagedOrLostLicenseToolStripMenuItem.Size = new System.Drawing.Size(468, 26);
+            this.replacementForDamagedOrLostLicenseToolStripMenuItem.Text = "Replacement For Damaged Or Lost License ";
+            this.replacementForDamagedOrLostLicenseToolStripMenuItem.Click += new System.EventHandler(this.replacementForDamagedOrLostLicenseToolStripMenuItem_Click);
             // 
             // manageApplicationsToolStripMenuItem
             // 
@@ -231,19 +238,12 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::DVLD.Properties.Resources.Logo_Final;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 30);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1312, 645);
+            this.pictureBox1.Size = new System.Drawing.Size(1312, 643);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // replacementForDamagedOrLostLicenseToolStripMenuItem
-            // 
-            this.replacementForDamagedOrLostLicenseToolStripMenuItem.Name = "replacementForDamagedOrLostLicenseToolStripMenuItem";
-            this.replacementForDamagedOrLostLicenseToolStripMenuItem.Size = new System.Drawing.Size(468, 26);
-            this.replacementForDamagedOrLostLicenseToolStripMenuItem.Text = "Replacement For Damaged Or Lost License ";
-            this.replacementForDamagedOrLostLicenseToolStripMenuItem.Click += new System.EventHandler(this.replacementForDamagedOrLostLicenseToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -255,7 +255,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip2);
             this.Name = "frmMain";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Main";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip2.ResumeLayout(false);

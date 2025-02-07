@@ -95,10 +95,11 @@ namespace DVLD_Presentation.Users
                 //MessageBox.Show("The name of user is: " + user.Person.FirstName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 clsCurrentUserInfo.CurrentUserID = user.UserID;
                 clsCurrentUserInfo.User = user;
-                frmMain frm = new frmMain();
-                frm.Show();
+                frmMain frm = new frmMain(this);
                 this.Hide();
-
+                frm.ShowDialog();
+                //this.Close();
+                //this.Close();
             }
         }
 

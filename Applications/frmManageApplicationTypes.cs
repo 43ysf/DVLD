@@ -15,11 +15,11 @@ namespace DVLD.Manage_Application_Types
 {
     public partial class frmManageApplicationTypes : Form
     {
-
+        DataTable _Applications;
         public frmManageApplicationTypes()
         {
             InitializeComponent();
-            _FillDataGridVeiwData();
+            //_FillDataGridVeiwData();
         }
         
         private void _FillDataGridVeiwData()
@@ -73,12 +73,38 @@ namespace DVLD.Manage_Application_Types
             int ApplicationID =(int) dataGridView1.SelectedRows[0].Cells["ID"].Value;
             frmEditApplicationType frm = new frmEditApplicationType( ApplicationID);
             frm.ShowDialog();
-            _FillDataGridVeiwData();
+            //_FillDataGridVeiwData();
+            frmManageApplicationTypes_Load(null, null);
         }
 
         public void Edit(string Title)
         {
             this.lbTitle.Text = Title;
+        }
+
+        private void frmManageApplicationTypes_Load(object sender, EventArgs e)
+        {
+            _Applications = clsApplicationType.GettAllApplicationTypes();
+            dataGridView1.DataSource = _Applications;
+            lblNumberOfRecords.Text = dataGridView1.Rows.Count.ToString();
+
+            if(dataGridView1.Rows.Count > 0 )
+            {
+                dataGridView1.Columns[0].HeaderText = "ID";
+                dataGridView1.Columns[0].Name = "ID";
+                dataGridView1.Columns[0].Width = 110;
+
+                dataGridView1.Columns[1].HeaderText = "Title";
+                dataGridView1.Columns[1].Width = 400;
+
+
+                dataGridView1.Columns[2].HeaderText = "Fees";
+                dataGridView1.Columns[2].Width = 100;
+
+
+                //dataGridView1.Columns[3].HeaderText = "Fees";
+                //dataGridView1.Columns[3].Width = 100;
+            }
         }
     }
 }

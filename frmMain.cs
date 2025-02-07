@@ -24,10 +24,13 @@ namespace DVLD
     public partial class frmMain : Form
     {
         clsUser User = null;
-        public frmMain()
+        private frmLoginScreen _LoginSrcren;
+        bool CloseForm = false;
+        public frmMain(frmLoginScreen loginScreen)
         {
             
             InitializeComponent();
+            _LoginSrcren = loginScreen;
             //SystemEvents.PowerModeChanged += OnScreenIsOf;
  
         }
@@ -45,7 +48,11 @@ namespace DVLD
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
+            if(e.CloseReason == CloseReason.UserClosing  && !CloseForm)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnExit3_Click(object sender, EventArgs e)
@@ -61,9 +68,13 @@ namespace DVLD
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            frmLoginScreen frm = new frmLoginScreen();
-            frm.ShowDialog();
+            //this.Visible = false;
+            clsCurrentUserInfo.User = null;
+            _LoginSrcren.Show();
+            CloseForm = true;
+            this.Close();
+            
+            //frm.ShowDialog();
         }
 
         private void currentUserInformationToolStripMenuItem_Click(object sender, EventArgs e)

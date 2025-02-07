@@ -1,0 +1,289 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Yousif\\source\\repos\\DVLD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5C3C2C66-8693-4606-B43D-FE2B54DAE10C}|DVLD.csproj|c:\\users\\yousif\\source\\repos\\dvld\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5C3C2C66-8693-4606-B43D-FE2B54DAE10C}|DVLD.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C3C2C66-8693-4606-B43D-FE2B54DAE10C}|DVLD.csproj|c:\\users\\yousif\\source\\repos\\dvld\\users\\frmloginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5C3C2C66-8693-4606-B43D-FE2B54DAE10C}|DVLD.csproj|solutionrelative:users\\frmloginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C72297-F64A-46EC-B311-1C46042BF964}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|c:\\users\\yousif\\source\\repos\\dvld_dataaccess\\mcrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C72297-F64A-46EC-B311-1C46042BF964}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|c:\\users\\yousif\\source\\repos\\dvld_dataaccess\\clspeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA9DF6E2-3C9E-4864-B494-87C5972409EA}|..\\DVLD_Business\\DVLD_Business.csproj|c:\\users\\yousif\\source\\repos\\dvld_business\\people\\clsperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C72297-F64A-46EC-B311-1C46042BF964}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|c:\\users\\yousif\\source\\repos\\dvld_dataaccess\\crud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C72297-F64A-46EC-B311-1C46042BF964}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|c:\\users\\yousif\\source\\repos\\dvld_dataaccess\\clssettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C72297-F64A-46EC-B311-1C46042BF964}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|c:\\users\\yousif\\source\\repos\\dvld_dataaccess\\clsmglob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA9DF6E2-3C9E-4864-B494-87C5972409EA}|..\\DVLD_Business\\DVLD_Business.csproj|c:\\users\\yousif\\source\\repos\\dvld_business\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsGlob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C72297-F64A-46EC-B311-1C46042BF964}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|c:\\users\\yousif\\source\\repos\\dvld_dataaccess\\clsappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C72297-F64A-46EC-B311-1C46042BF964}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|c:\\users\\yousif\\source\\repos\\dvld_dataaccess\\clscountries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C72297-F64A-46EC-B311-1C46042BF964}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|c:\\users\\yousif\\source\\repos\\dvld_dataaccess\\clsapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C3C2C66-8693-4606-B43D-FE2B54DAE10C}|DVLD.csproj|C:\\Users\\Yousif\\source\\repos\\DVLD\\localdriverlicenseapplications\\frmlistlocaldrivinglicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5C3C2C66-8693-4606-B43D-FE2B54DAE10C}|DVLD.csproj|solutionrelative:localdriverlicenseapplications\\frmlistlocaldrivinglicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C3C2C66-8693-4606-B43D-FE2B54DAE10C}|DVLD.csproj|C:\\Users\\Yousif\\source\\repos\\DVLD\\localdriverlicenseapplications\\frmaddnewlocaldrivingapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5C3C2C66-8693-4606-B43D-FE2B54DAE10C}|DVLD.csproj|solutionrelative:localdriverlicenseapplications\\frmaddnewlocaldrivingapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C3C2C66-8693-4606-B43D-FE2B54DAE10C}|DVLD.csproj|C:\\Users\\Yousif\\source\\repos\\DVLD\\localdriverlicenseapplications\\frmlistlocaldrivinglicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C3C2C66-8693-4606-B43D-FE2B54DAE10C}|DVLD.csproj|solutionrelative:localdriverlicenseapplications\\frmlistlocaldrivinglicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmLoginScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD\\Users\\frmLoginScreen.cs",
+              "RelativeDocumentMoniker": "Users\\frmLoginScreen.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD\\Users\\frmLoginScreen.cs [Design]",
+              "RelativeToolTip": "Users\\frmLoginScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T09:12:49.931Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmMain.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD\\frmMain.cs",
+              "RelativeDocumentMoniker": "frmMain.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD\\frmMain.cs [Design]",
+              "RelativeToolTip": "frmMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T09:10:24.349Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD_Business\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_Business\\Class1.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD_Business\\Class1.cs",
+              "RelativeToolTip": "..\\DVLD_Business\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T22:06:38.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "clsSettings.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsSettings.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\clsSettings.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsSettings.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccess\\clsSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T21:59:57.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "clsMGlob.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsMGlob.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\clsMGlob.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsMGlob.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccess\\clsMGlob.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T21:58:21.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MCRUD.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\MCRUD.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\MCRUD.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\MCRUD.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccess\\MCRUD.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T21:57:44.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "clsGlob.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsGlob.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\clsGlob.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsGlob.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccess\\clsGlob.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T19:47:51.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "clsPeople.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsPeople.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\clsPeople.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsPeople.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccess\\clsPeople.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAQwCAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T19:45:52.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "clsPerson.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD_Business\\People\\clsPerson.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_Business\\People\\clsPerson.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD_Business\\People\\clsPerson.cs",
+              "RelativeToolTip": "..\\DVLD_Business\\People\\clsPerson.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAwDYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T19:34:47.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "clsAppointments.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsAppointments.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\clsAppointments.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsAppointments.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccess\\clsAppointments.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T19:08:41.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "clsCountries.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD\\DVLD_DataAccess\\clsCountries.cs",
+              "RelativeDocumentMoniker": "DVLD_DataAccess\\clsCountries.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD\\DVLD_DataAccess\\clsCountries.cs",
+              "RelativeToolTip": "DVLD_DataAccess\\clsCountries.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBAAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T19:08:04.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "clsApplications.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsApplications.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\clsApplications.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\clsApplications.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccess\\clsApplications.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAkwCIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T19:06:21.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CRUD.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\CRUD.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\CRUD.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD_DataAccess\\CRUD.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccess\\CRUD.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T19:03:44.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "frmListLocalDrivingLicenseApplications.cs",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD\\LocalDriverLicenseApplications\\frmListLocalDrivingLicenseApplications.cs",
+              "RelativeDocumentMoniker": "LocalDriverLicenseApplications\\frmListLocalDrivingLicenseApplications.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD\\LocalDriverLicenseApplications\\frmListLocalDrivingLicenseApplications.cs",
+              "RelativeToolTip": "LocalDriverLicenseApplications\\frmListLocalDrivingLicenseApplications.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAswK0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T08:40:18.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmListLocalDrivingLicenseApplications.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD\\LocalDriverLicenseApplications\\frmListLocalDrivingLicenseApplications.cs",
+              "RelativeDocumentMoniker": "LocalDriverLicenseApplications\\frmListLocalDrivingLicenseApplications.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD\\LocalDriverLicenseApplications\\frmListLocalDrivingLicenseApplications.cs [Design]",
+              "RelativeToolTip": "LocalDriverLicenseApplications\\frmListLocalDrivingLicenseApplications.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T08:40:13.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmAddNewLocalDrivingApplication.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Yousif\\source\\repos\\DVLD\\LocalDriverLicenseApplications\\frmAddNewLocalDrivingApplication.cs",
+              "RelativeDocumentMoniker": "LocalDriverLicenseApplications\\frmAddNewLocalDrivingApplication.cs",
+              "ToolTip": "C:\\Users\\Yousif\\source\\repos\\DVLD\\LocalDriverLicenseApplications\\frmAddNewLocalDrivingApplication.cs [Design]",
+              "RelativeToolTip": "LocalDriverLicenseApplications\\frmAddNewLocalDrivingApplication.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T08:40:09.537Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

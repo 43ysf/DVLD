@@ -224,6 +224,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Name = "frmLoginScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLoginScreen";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

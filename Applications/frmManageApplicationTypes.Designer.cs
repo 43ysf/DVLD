@@ -143,6 +143,7 @@
             this.Name = "frmManageApplicationTypes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmManageApplicationTypes";
+            this.Load += new System.EventHandler(this.frmManageApplicationTypes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

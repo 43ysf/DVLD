@@ -16,13 +16,14 @@ namespace DVLD.Users
         public frmManageUsers(clsUser CurrentUser)
         {
             InitializeComponent();
-            LoadDataToDataGrideView();
-            txtFilter.Visible = false;
-            cbFilterBy.Text = "None";
-            this.CurrentUser = CurrentUser;
+            //LoadDataToDataGrideView();
+            //txtFilter.Visible = false;
+            //cbFilterBy.Text = "None";
+            //this.CurrentUser = CurrentUser;
         }
-        
+        private DataTable _dtAllUsers = null;
         public ComboBox cbIsActive = new ComboBox();
+        private string _RowFiltter = "None";
         
         private void lbTitle_Click(object sender, EventArgs e)
         {
@@ -31,24 +32,24 @@ namespace DVLD.Users
 
         private void LoadDataToDataGrideView()
         {
-            DataTable dt = clsUser.GetAllUsers();
+            _dtAllUsers = clsUser.GetAllUsers();
             string FullName = "";
             string s = "";
-            dgvListUsers.Columns.Clear();
-            dgvListUsers.Columns.Add("UserID", "UserID");
-            dgvListUsers.Columns.Add("PersonID", "PersonID");
-            dgvListUsers.Columns.Add("FullName", "FullName");
-            dgvListUsers.Columns.Add("UserName", "UserName");
+            dgvUsers.Columns.Clear();
+            dgvUsers.Columns.Add("UserID", "UserID");
+            dgvUsers.Columns.Add("PersonID", "PersonID");
+            dgvUsers.Columns.Add("FullName", "FullName");
+            dgvUsers.Columns.Add("UserName", "UserName");
             DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn();
             col.HeaderText = "IsActive";
             col.Name = "IsActive";
-            dgvListUsers.Columns.Add(col);
-            foreach (DataRow dr in dt.Rows) {
+            dgvUsers.Columns.Add(col);
+            foreach (DataRow dr in _dtAllUsers.Rows) {
                 FullName = clsPerson.GetFullNamePerson((int)dr["PersonID"]);
-                dgvListUsers.Rows.Add(dr["UserID"], dr["PersonID"], FullName, dr["UserName"], dr["IsActive"]);
+                dgvUsers.Rows.Add(dr["UserID"], dr["PersonID"], FullName, dr["UserName"], dr["IsActive"]);
                 
             }
-            lblNumberOfRecords.Text = dgvListUsers.Rows.Count.ToString();
+            lblNumberOfRecords.Text = dgvUsers.Rows.Count.ToString();
            
         }
 
@@ -57,12 +58,12 @@ namespace DVLD.Users
         {
             if(e.Button == MouseButtons.Right)
             {
-                var hitTestInfo = dgvListUsers.HitTest(e.X, e.Y);
+                var hitTestInfo = dgvUsers.HitTest(e.X, e.Y);
                  if (hitTestInfo.RowIndex >= 0)
                 {
-                    dgvListUsers.ClearSelection();
-                    dgvListUsers.Rows[hitTestInfo.RowIndex].Selected = true;
-                    contextMenuStrip1.Show(dgvListUsers, e.Location);
+                    dgvUsers.ClearSelection();
+                    dgvUsers.Rows[hitTestInfo.RowIndex].Selected = true;
+                    contextMenuStrip1.Show(dgvUsers, e.Location);
                     //contextMenuStrip1.Show();
                 }
 
@@ -70,11 +71,11 @@ namespace DVLD.Users
 
             if(e.Button == MouseButtons.Left)
             {
-                var hitMouseInfo = dgvListUsers.HitTest(e.X, e.Y);
+                var hitMouseInfo = dgvUsers.HitTest(e.X, e.Y);
                 if(hitMouseInfo.RowIndex >= 0)
                 {
-                    dgvListUsers.ClearSelection();
-                    dgvListUsers.Rows[hitMouseInfo.RowIndex].Selected = true;   
+                    dgvUsers.ClearSelection();
+                    dgvUsers.Rows[hitMouseInfo.RowIndex].Selected = true;   
 
                 }
             }
@@ -90,7 +91,7 @@ namespace DVLD.Users
             // int PersonID = int.Parse(ID);
             //frmPersonInfo frm = new  frmPersonInfo(PersonID);
             // frm.ShowDialog();
-            int UserID = (int)dgvListUsers.SelectedRows[0].Cells["UserID"].Value;
+            int UserID = (int)dgvUsers.SelectedRows[0].Cells["UserID"].Value;
             frmLoginInfo frm = new frmLoginInfo(UserID);
             frm.ShowDialog();
             _ReloadDataGirdView();
@@ -98,12 +99,12 @@ namespace DVLD.Users
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int UserID = int.Parse( dgvListUsers.SelectedRows[0].Cells["UserID"].Value.ToString());
+            int UserID = int.Parse( dgvUsers.SelectedRows[0].Cells["UserID"].Value.ToString());
             //frmAddOrUpdate frm = new frmAddOrUpdate(PersonID);  
             //frm.ShowDialog();
             frmAddNewOrUpdateUser frm = new frmAddNewOrUpdateUser(UserID);
             frm.ShowDialog();
-            LoadDataToDataGrideView();
+            //LoadDataToDataGrideView();
             
         }
 
@@ -111,49 +112,92 @@ namespace DVLD.Users
         {
             frmAddNewOrUpdateUser frm = new frmAddNewOrUpdateUser();
             frm.ShowDialog();
-            this.LoadDataToDataGrideView();
+            //this.LoadDataToDataGrideView();
         }
 
         private void cbFilterBy_SelectedIndexChanged(object sender, EventArgs e)
         {
             _ReloadDataGirdView();
 
-            string SelectedItem = cbFilterBy.Text;
-            if (SelectedItem == "UserID" || SelectedItem == "PersonID")
-            {
-                txtFilter.Clear();
-                txtFilter.Visible = true ;
-                cbActive.Visible = false;
-                txtFilter.KeyPress += new KeyPressEventHandler(txtFilter_KeyPress);
+            
 
-            }
-            if(cbFilterBy.SelectedText == "None")
-            {
-                txtFilter.Visible = false;
-                cbActive.Visible = false;
-            }
-            if(SelectedItem == "None")
-            {
+            string SelectedItem = cbFilterBy.Text.ToLower();
 
-                txtFilter.Clear();
-                txtFilter.Visible = false;
-                cbActive.Visible = false;
-            }
-            if(SelectedItem == "Username")
+           //if(SelectedItem != "UserName")
+           // {
+           //     txtFilter.KeyPress += txtFilter_KeyPress;
+           // }
+
+
+           // if (SelectedItem == "UserID" || SelectedItem == "PersonID")
+           // {
+           //     txtFilter.Clear();
+           //     txtFilter.Visible = true ;
+           //     cbActive.Visible = false;
+           //     txtFilter.KeyPress += new KeyPressEventHandler(txtFilter_KeyPress);
+
+           // }
+           // if(SelectedItem == "None")
+           // {
+           //     txtFilter.Clear();
+           //     txtFilter.Visible = false;
+           //     cbActive.Visible = false;
+           // }
+           // if(SelectedItem == "Username")
+           // {
+           //     txtFilter.Clear();
+           //     txtFilter.Visible = true;
+           //     txtFilter.KeyPress -= new KeyPressEventHandler(txtFilter_KeyPress);
+           //     cbActive.Visible = false;
+           // }
+           // if(SelectedItem == "Active")
+           // {
+           //     txtFilter.Clear();
+           //     txtFilter.Visible = false;
+           //     cbActive.Visible = true;
+           //     cbActive.SelectedText = "Yes";
+           //     //AddComboBox();
+           // }
+           if(SelectedItem == "active")
             {
-                txtFilter.Clear();
-                txtFilter.Visible = true;
-                txtFilter.KeyPress -= new KeyPressEventHandler(txtFilter_KeyPress);
-                cbActive.Visible = false;
-            }
-            if(SelectedItem == "Active")
-            {
-                txtFilter.Clear();
-                txtFilter.Visible = false;
+                _RowFiltter = "Active";
                 cbActive.Visible = true;
-                cbActive.SelectedText = "Yes";
-                //AddComboBox();
+                txtFilter.Visible = false;
+                cbActive.Focus();
+                cbActive.SelectedIndex = 0;
             }
+           else
+            {
+                cbActive.Visible = false;
+                if(SelectedItem == "username")
+                {
+                    txtFilter.Visible = true;
+                    _RowFiltter = "UserName";
+                    txtFilter.KeyPress -= new KeyPressEventHandler(txtFilter_KeyPress); 
+
+                }
+                else if (SelectedItem == "personid" ||  SelectedItem == "userid")
+                {
+                    txtFilter.Visible = true;
+                    txtFilter.KeyPress += new KeyPressEventHandler(txtFilter_KeyPress);
+                    if(SelectedItem == "personid")
+                    {
+                        _RowFiltter = "PersonID";
+
+                    }
+                    else
+                    {
+                        _RowFiltter = "UserID";
+                    }
+                }
+                else
+                {
+                        txtFilter.Visible = false;
+                        _RowFiltter = "None";
+                   
+                }
+            }
+            
 
         }
 
@@ -168,7 +212,7 @@ namespace DVLD.Users
         private void _SearchInDataGirdView(string Column)
         {
             string searchValue = txtFilter.Text.ToLower();
-            foreach (DataGridViewRow row in dgvListUsers.Rows)
+            foreach (DataGridViewRow row in dgvUsers.Rows)
             {
                 bool rowVisible = false;
 
@@ -186,35 +230,54 @@ namespace DVLD.Users
 
         private void txtFilter_TextChanged(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(txtFilter.Text))
+            //if(string.IsNullOrWhiteSpace(txtFilter.Text))
+            //{
+            //    _ReloadDataGirdView();
+            //}
+            //else
+            //{
+
+            //    string SelectedItem = cbFilterBy.SelectedItem.ToString();
+            //    switch (SelectedItem)
+            //    {
+            //        case "PersonID":
+            //            _SearchInDataGirdView("PersonID");
+            //            break;
+            //        case "UserID":
+            //            _SearchInDataGirdView("UserID");
+            //            break;
+            //        case "Username":
+            //            _SearchInDataGirdView("Username");
+            //            break;
+            //        case ("Active"):
+            //            _SearchInDataGirdView("IsActive");
+            //            break;
+            //        case "None":
+            //            LoadDataToDataGrideView();
+            //            break;
+
+            //    }
+
+            //}
+
+            if(txtFilter.Text.Trim() == "" || _RowFiltter ==  "None")
             {
-                _ReloadDataGirdView();
+                _dtAllUsers.DefaultView.RowFilter = "";
+                lblNumberOfRecords.Text = _dtAllUsers.Rows.Count.ToString();
+                return;
+            }
+            if(_RowFiltter != "UserName")
+            {
+                _dtAllUsers.DefaultView.RowFilter = string.Format("[{0}] = {1}", _RowFiltter, txtFilter.Text.Trim());
+
             }
             else
             {
-
-                string SelectedItem = cbFilterBy.SelectedItem.ToString();
-                switch (SelectedItem)
-                {
-                    case "PersonID":
-                        _SearchInDataGirdView("PersonID");
-                        break;
-                    case "UserID":
-                        _SearchInDataGirdView("UserID");
-                        break;
-                    case "Username":
-                        _SearchInDataGirdView("Username");
-                        break;
-                    case ("Active"):
-                        _SearchInDataGirdView("IsActive");
-                        break;
-                    case "None":
-                        LoadDataToDataGrideView();
-                        break;
-
-                }
+                _dtAllUsers.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", _RowFiltter, txtFilter.Text.Trim());
 
             }
+            lblNumberOfRecords.Text = _dtAllUsers.Rows.Count.ToString();
+
 
 
 
@@ -223,7 +286,7 @@ namespace DVLD.Users
 
         private void _ReloadDataGirdView()
         {
-            foreach(DataGridViewRow row in dgvListUsers.Rows)
+            foreach(DataGridViewRow row in dgvUsers.Rows)
             {
                 row.Visible = true;
             }
@@ -231,37 +294,36 @@ namespace DVLD.Users
         private void cbActive_SelectedIndexChanged(object sender, EventArgs e)
         {
             //LoadDataToDataGrideView();
-            _ReloadDataGirdView();
-            string searchValue = cbActive.SelectedItem.ToString().ToLower();
-            if(searchValue == "all")
-            {
-                return;
-            }
-            foreach (DataGridViewRow row in dgvListUsers.Rows)
-            {
 
-                if ( ((bool)row.Cells["IsActive"].Value == false) && searchValue == "no" )
-                {
-                    row.Visible = true;
-                }
-                
-              else  if((bool)row.Cells["IsActive"].Value ==  true && searchValue == "yes")
-                {
-                    row.Visible = true;
-                }
-                
-               else
-                {
-                    row.Visible = false;
-                }
+            string FilterColumn = "IsActive";
+            string FilterValue = cbActive.Text;
+
+            switch (FilterValue)
+            {
+                case "All":
+                    break;
+                case "Yes":
+                    FilterValue = "1";
+                    break;
+                case "No":
+                    FilterValue = "0";
+                    break;
             }
 
+
+            if (FilterValue == "All")
+                _dtAllUsers.DefaultView.RowFilter = "";
+            else
+                //in this case we deal with numbers not string.
+                _dtAllUsers.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, FilterValue);
+
+            //lblRecordsCount.Text = _dtAllUsers.Rows.Count.ToString();
 
         }
 
         private void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int UserID =(int) dgvListUsers.SelectedRows[0].Cells["UserID"].Value;
+            int UserID =(int) dgvUsers.SelectedRows[0].Cells["UserID"].Value;
             if(UserID == CurrentUser.UserID)
             {
                 MessageBox.Show("You can't delete current user", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -270,7 +332,7 @@ namespace DVLD.Users
             if(clsUser.Delete(UserID))
             {
                 MessageBox.Show("User Deleted Successfully");
-                LoadDataToDataGrideView(); 
+                //LoadDataToDataGrideView(); 
             }
             else
             {
@@ -280,10 +342,36 @@ namespace DVLD.Users
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int UserID = (int)dgvListUsers.SelectedRows[0].Cells["UserID"].Value;
+            int UserID = (int)dgvUsers.SelectedRows[0].Cells["UserID"].Value;
             frmChangePassword frm = new frmChangePassword(UserID);
             frm.ShowDialog();
             _ReloadDataGirdView();
+
+        }
+
+        private void frmManageUsers_Load(object sender, EventArgs e)
+        {
+            _dtAllUsers = clsUser.GetAllUsers();
+            dgvUsers.DataSource = _dtAllUsers;
+            cbFilterBy.SelectedIndex = 0;
+            cbActive.SelectedIndex = 0;
+            lblNumberOfRecords.Text = dgvUsers.Rows.Count.ToString();
+
+            dgvUsers.Columns[0].HeaderText = "User ID";
+            dgvUsers.Columns[0].Width = 110;
+
+            dgvUsers.Columns[1].HeaderText = "Person ID";
+            dgvUsers.Columns[1].Width = 120;
+
+            dgvUsers.Columns[2].HeaderText = "Full Name";
+            dgvUsers.Columns[2].Width = 350;
+
+            dgvUsers.Columns[3].HeaderText = "UserName";
+            dgvUsers.Columns[3].Width = 120;
+
+            dgvUsers.Columns[4].HeaderText = "Is Active";
+            dgvUsers.Columns[4].Width = 120;
+
 
         }
     }

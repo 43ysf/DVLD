@@ -32,7 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvListUsers = new System.Windows.Forms.DataGridView();
+            this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.shwoDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +50,7 @@
             this.cbActive = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,23 +89,23 @@
             this.panel1.Size = new System.Drawing.Size(681, 307);
             this.panel1.TabIndex = 2;
             // 
-            // dgvListUsers
+            // dgvUsers
             // 
-            this.dgvListUsers.AllowDrop = true;
-            this.dgvListUsers.AllowUserToAddRows = false;
-            this.dgvListUsers.AllowUserToDeleteRows = false;
-            this.dgvListUsers.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dgvListUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvListUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListUsers.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvListUsers.Location = new System.Drawing.Point(12, 385);
-            this.dgvListUsers.Name = "dgvListUsers";
-            this.dgvListUsers.ReadOnly = true;
-            this.dgvListUsers.RowHeadersWidth = 51;
-            this.dgvListUsers.RowTemplate.Height = 24;
-            this.dgvListUsers.Size = new System.Drawing.Size(1160, 392);
-            this.dgvListUsers.TabIndex = 3;
-            this.dgvListUsers.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvListUsers_MouseDown);
+            this.dgvUsers.AllowDrop = true;
+            this.dgvUsers.AllowUserToAddRows = false;
+            this.dgvUsers.AllowUserToDeleteRows = false;
+            this.dgvUsers.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsers.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvUsers.Location = new System.Drawing.Point(12, 385);
+            this.dgvUsers.Name = "dgvUsers";
+            this.dgvUsers.ReadOnly = true;
+            this.dgvUsers.RowHeadersWidth = 51;
+            this.dgvUsers.RowTemplate.Height = 24;
+            this.dgvUsers.Size = new System.Drawing.Size(1160, 392);
+            this.dgvUsers.TabIndex = 3;
+            this.dgvUsers.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvListUsers_MouseDown);
             // 
             // contextMenuStrip1
             // 
@@ -119,52 +119,52 @@
             this.sendEmailToolStripMenuItem,
             this.phonCallToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 200);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(194, 172);
             // 
             // shwoDetailsToolStripMenuItem
             // 
             this.shwoDetailsToolStripMenuItem.Name = "shwoDetailsToolStripMenuItem";
-            this.shwoDetailsToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.shwoDetailsToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
             this.shwoDetailsToolStripMenuItem.Text = "Shwo Details";
             this.shwoDetailsToolStripMenuItem.Click += new System.EventHandler(this.shwoDetailsToolStripMenuItem_Click);
             // 
             // addNewUserToolStripMenuItem
             // 
             this.addNewUserToolStripMenuItem.Name = "addNewUserToolStripMenuItem";
-            this.addNewUserToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.addNewUserToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
             this.addNewUserToolStripMenuItem.Text = "Add New User";
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteUserToolStripMenuItem
             // 
             this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
-            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
             this.deleteUserToolStripMenuItem.Text = "Delete User";
             this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteUserToolStripMenuItem_Click);
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // sendEmailToolStripMenuItem
             // 
             this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
             this.sendEmailToolStripMenuItem.Text = "Send Email";
             // 
             // phonCallToolStripMenuItem
             // 
             this.phonCallToolStripMenuItem.Name = "phonCallToolStripMenuItem";
-            this.phonCallToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.phonCallToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
             this.phonCallToolStripMenuItem.Text = "Phon call";
             // 
             // btnAddNewUser
@@ -277,14 +277,15 @@
             this.Controls.Add(this.cbFilterBy);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddNewUser);
-            this.Controls.Add(this.dgvListUsers);
+            this.Controls.Add(this.dgvUsers);
             this.Controls.Add(this.panel1);
             this.Name = "frmManageUsers";
             this.Text = "frmManageUsers";
+            this.Load += new System.EventHandler(this.frmManageUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -296,7 +297,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvListUsers;
+        private System.Windows.Forms.DataGridView dgvUsers;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem shwoDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewUserToolStripMenuItem;
